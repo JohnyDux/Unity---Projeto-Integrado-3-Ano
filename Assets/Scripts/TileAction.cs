@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TileAction : MonoBehaviour
 {
@@ -8,11 +9,13 @@ public class TileAction : MonoBehaviour
     public Color StartColor;
     public Color ClickColor;
     public bool isHit;
+    public int scoreValue = 1;
 
     void Start()
     {
         isHit = false;
         color.color = StartColor;
+        FindObjectOfType<Score>().ScoreUpdate(0);
     }
 
 
@@ -25,6 +28,8 @@ public class TileAction : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             color.color = ClickColor;
+            isHit = true;
+            FindObjectOfType<Score>().ScoreUpdate(scoreValue);
         }
     }
 
@@ -38,7 +43,8 @@ public class TileAction : MonoBehaviour
             }
             else
             {
-                Debug.Log("game has ended");
+                SceneManager.UnloadSceneAsync("Game");
+                SceneManager.LoadScene("Menu");
             }
         }
     }
