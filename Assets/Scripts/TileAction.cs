@@ -7,7 +7,8 @@ public class TileAction : MonoBehaviour
 {
     public SpriteRenderer color;
     public Color StartColor;
-    public Color ClickColor;
+    public List<Color> colorsList;
+    Color ClickColor;
     public bool isHit;
     public int scoreValue = 1;
 
@@ -21,13 +22,15 @@ public class TileAction : MonoBehaviour
 
     void Update()
     {
-
+        
     }
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            color.color = ClickColor;
+            int rand = Random.Range(0, colorsList.Count);
+            color.color = colorsList[rand];
+
             isHit = true;
             FindObjectOfType<Score>().ScoreUpdate(scoreValue);
         }
