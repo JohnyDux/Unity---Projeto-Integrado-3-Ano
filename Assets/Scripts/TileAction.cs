@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class TileAction : MonoBehaviour
 {
-    SpriteRenderer color;
+    public SpriteRenderer color;
+    public Color StartColor;
+    public Color ClickColor;
+    public bool isHit;
 
     void Start()
     {
-        color = GetComponent<SpriteRenderer>();
+        isHit = false;
+        color.color = StartColor;
     }
 
 
@@ -20,7 +24,22 @@ public class TileAction : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            color.color = Color.yellow;
+            color.color = ClickColor;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "border")
+        {
+            if (color.color == ClickColor)
+            {
+                Debug.Log("you're fine");
+            }
+            else
+            {
+                Debug.Log("game has ended");
+            }
         }
     }
 }

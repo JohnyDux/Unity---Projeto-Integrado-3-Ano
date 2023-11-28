@@ -117,7 +117,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -161,3 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f5d02fbe3783e41abe8177e4046b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color: {fileID: 1684192141437107324}
+  StartColor: {r: 1, g: 1, b: 1, a: 1}
+  ClickColor: {r: 0.8396226, g: 0.5854563, b: 0.08317016, a: 1}
