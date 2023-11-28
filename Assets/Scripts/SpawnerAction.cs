@@ -21,7 +21,10 @@ public class SpawnerAction : MonoBehaviour
 
     void Update()
     {
-
+        if (checkforempty())
+        {
+            spawner();
+        }
     }
 
     void spawner()
@@ -31,5 +34,17 @@ public class SpawnerAction : MonoBehaviour
             GameObject piano = Instantiate(pianoTile, child.position, Quaternion.identity);
             piano.transform.parent = child;
         }
+    }
+
+    bool checkforempty()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.childCount > 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
