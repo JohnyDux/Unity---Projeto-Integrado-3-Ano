@@ -36,11 +36,11 @@ public class SpawnerAction : MonoBehaviour
     {
         Transform position = freeposition;
         float rand = Random.Range(min, max);
-        Vector3 offset = new Vector3(0, rand, 0);
+        Vector3 offset = new Vector3(rand, 0, 0);
 
         if (position)
         {
-            GameObject piano = Instantiate(pianoTile, position.transform.position, Quaternion.identity);
+            GameObject piano = Instantiate(pianoTile, position.transform.position + offset, Quaternion.identity);
             piano.transform.parent = position;
         }
         if (freeposition)
