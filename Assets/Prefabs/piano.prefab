@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9159798266592408106}
   - component: {fileID: -1352791607675598612}
   - component: {fileID: 2201618343645909736}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: piano
   m_TagString: piano
   m_Icon: {fileID: 0}
@@ -173,5 +173,10 @@ MonoBehaviour:
   - {r: 0.19607843, g: 0.42745098, b: 0.38431373, a: 1}
   - {r: 0.90588236, g: 0.6784314, b: 0.61960787, a: 1}
   - {r: 0.54901963, g: 0.5882353, b: 0.47058824, a: 1}
+  rb: {fileID: 9159798266592408106}
+  speed: 500
   isHit: 0
   scoreValue: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8

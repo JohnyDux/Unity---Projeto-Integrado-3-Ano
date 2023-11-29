@@ -35,5 +35,10 @@ public class Score : MonoBehaviour
 
             timerText.text = minituesLeft + ":" + seconds;
         }
+
+        else
+        {
+            Time.timeScale = 0f;
+        }
     }
 }

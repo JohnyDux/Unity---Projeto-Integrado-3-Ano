@@ -9,8 +9,11 @@ public class TileAction : MonoBehaviour
     public Color StartColor;
     public List<Color> colorsList;
     Color ClickColor;
+    public Rigidbody2D rb;
+    public float speed = 500f;
     public bool isHit;
     public int scoreValue = 1;
+    public LayerMask layerMask;
 
     void Start()
     {
@@ -22,11 +25,11 @@ public class TileAction : MonoBehaviour
 
     void Update()
     {
-        
+        rb.velocity = new Vector3(0, -speed*Time.deltaTime, 0);
     }
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isHit == false)
         {
             int rand = Random.Range(0, colorsList.Count);
             color.color = colorsList[rand];

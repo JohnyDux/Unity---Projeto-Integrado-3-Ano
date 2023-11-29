@@ -638,6 +638,7 @@ MonoBehaviour:
   scorePoints: 0
   missText: {fileID: 1102159829}
   check: {fileID: 953268109}
+  timeLeft: 90
   timerText: {fileID: 1724141367}
 --- !u!1 &953268106
 GameObject:

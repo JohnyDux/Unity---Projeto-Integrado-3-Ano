@@ -8,6 +8,11 @@ public class SpawnerAction : MonoBehaviour
     public float width = 10f;
     public float height = 5f;
     public GameObject pianoTile;
+    public float delay = 0.5f;
+    public float min = -5f;
+    public float max = 10f;
+
+    Transform freeposition;
 
     void Start()
     {
@@ -24,6 +29,23 @@ public class SpawnerAction : MonoBehaviour
         if (checkforempty())
         {
             spawner();
+        }
+    }
+
+    void spawnuntil()
+    {
+        Transform position = freeposition;
+        float rand = Random.Range(min, max);
+        Vector3 offset = new Vector3(0, rand, 0);
+
+        if (position)
+        {
+            GameObject piano = Instantiate(pianoTile, position.transform.position, Quaternion.identity);
+            piano.transform.parent = position;
+        }
+        if (freeposition)
+        {
+            Invoke("spawnuntill", delay);
         }
     }
 
