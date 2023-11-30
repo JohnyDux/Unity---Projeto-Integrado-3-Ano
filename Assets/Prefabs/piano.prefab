@@ -9862,7 +9862,7 @@ MonoBehaviour:
   explosionEffect: {fileID: 6592167717674596873}
   pulseEffect: {fileID: 4833449093152928940}
   rb: {fileID: 9159798266592408106}
-  speed: 500
+  speed: 1000
   isHit: 0
   scoreValue: 1
   layerMask:
