@@ -21,5 +21,14 @@ public class DragAndDrop : MonoBehaviour
                 SelectedPiece = hit.transform.gameObject;
             }
         }
+        if (Input.GetMouseButtonUp(0))
+        {
+            SelectedPiece = null;
+        }
+        if(SelectedPiece != null)
+        {
+            Vector3 MousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            SelectedPiece.transform.position = new Vector3(MousePoint.x, MousePoint.y, 0);
+        }
     }
 }
