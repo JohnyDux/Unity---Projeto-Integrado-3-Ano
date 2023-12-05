@@ -182,6 +182,9 @@ MonoBehaviour:
   width: 10.77
   height: 6.17
   pianoTile: {fileID: 5867830164223099401, guid: aac14c69cdffc214092af295bbb2f7cf, type: 3}
+  delay: 0.5
+  min: -5
+  max: 10
 --- !u!1 &158746647
 GameObject:
   m_ObjectHideFlags: 0
