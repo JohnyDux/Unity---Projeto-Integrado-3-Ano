@@ -7,6 +7,7 @@ TagManager:
   - piano
   - border
   - Puzzle
+  - Violinist
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DestroyerCheckers : MonoBehaviour
 {
     public int numberOfMisses;
+    public Animator ViolinistAnimator;
     private void Start()
     {
         numberOfMisses = 0;
@@ -25,6 +26,7 @@ public class DestroyerCheckers : MonoBehaviour
         if (!tile.isHit)
         {
             numberOfMisses++;
+            ViolinistAnimator.SetBool("IsPlaying", false);
         } 
         Destroy(collision.gameObject);
     }

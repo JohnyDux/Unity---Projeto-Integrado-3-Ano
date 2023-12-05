@@ -9,19 +9,20 @@ public class TileAction : MonoBehaviour
     public Color StartColor;
     public List<Color> colorsList;
     Color ClickColor;
-    public ParticleSystem explosionEffect;
-    public ParticleSystem pulseEffect;
     public Rigidbody2D rb;
     public float speed = 500f;
     public bool isHit;
     public int scoreValue = 1;
     public LayerMask layerMask;
 
+    Animator Violinist;
+    public ParticleSystem SoundParticles;
     void Start()
     {
         isHit = false;
         color.color = StartColor;
         FindObjectOfType<Score>().ScoreUpdate(0);
+        Violinist = GameObject.FindGameObjectWithTag("Violinist").GetComponent<Animator>();
     }
 
 
@@ -31,18 +32,20 @@ public class TileAction : MonoBehaviour
     }
     void OnMouseOver()
     {
-        var main = explosionEffect.main;
-
         if (Input.GetMouseButtonDown(0) && isHit == false)
         {
             int rand = Random.Range(0, colorsList.Count);
             color.color = colorsList[rand];
-            explosionEffect.Play();
-            pulseEffect.Play();
-            main.startColor = colorsList[rand];
 
             isHit = true;
             FindObjectOfType<Score>().ScoreUpdate(scoreValue);
+            Violinist.SetBool("IsPlaying", true);
+            SoundParticles.Play();
+        }
+
+        if (isHit)
+        {
+            SoundParticles.Play();
         }
     }
 
