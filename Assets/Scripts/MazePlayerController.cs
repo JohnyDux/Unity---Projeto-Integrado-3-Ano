@@ -14,7 +14,7 @@ public class MazePlayerController : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.z = Input.GetAxisRaw("Vertical");
 
         // Flip player when x change, use only if you want
         Vector3 characterScale = transform.localScale;
