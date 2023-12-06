@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Music Sheet.unity
     guid: 613111e67a43b9b4cbac51d5c9708e15
+  - enabled: 1
+    path: Assets/Scenes/Settings Menu.unity
+    guid: c6e7edd666d0415429d03c96413266cc
   m_configObjects: {}
