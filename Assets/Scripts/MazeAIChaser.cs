@@ -28,4 +28,9 @@ public class MazeAIChaser : MonoBehaviour
             navMeshAgent.SetDestination(player.position);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Time.timeScale = 0f;
+    }
 }
