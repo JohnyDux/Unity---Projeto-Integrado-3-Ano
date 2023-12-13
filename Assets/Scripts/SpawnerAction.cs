@@ -51,11 +51,16 @@ public class SpawnerAction : MonoBehaviour
 
     void spawner()
     {
-        foreach(Transform child in transform)
+        delay -= Time.deltaTime;
+
+        if (delay <= 0)
         {
-            GameObject piano = Instantiate(pianoTile, child.position, Quaternion.identity);
-            piano.transform.parent = child;
-        }
+            foreach (Transform child in transform)
+            {
+                GameObject piano = Instantiate(pianoTile, child.position, Quaternion.identity);
+                piano.transform.parent = child;
+            }
+        }   
     }
 
     bool checkforempty()

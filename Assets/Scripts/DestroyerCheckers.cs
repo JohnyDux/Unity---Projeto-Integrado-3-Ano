@@ -14,7 +14,7 @@ public class DestroyerCheckers : MonoBehaviour
 
     void Update()
     {
-        if (numberOfMisses > 20)
+        if (numberOfMisses > 5)
         {
             SceneManager.LoadScene("Main Menu");
         }

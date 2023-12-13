@@ -174,7 +174,7 @@ MonoBehaviour:
   - {r: 0.90588236, g: 0.6784314, b: 0.61960787, a: 1}
   - {r: 0.54901963, g: 0.5882353, b: 0.47058824, a: 1}
   rb: {fileID: 9159798266592408106}
-  speed: 1000
+  speed: 500
   isHit: 0
   scoreValue: 1
   layerMask:

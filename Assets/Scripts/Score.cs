@@ -15,6 +15,17 @@ public class Score : MonoBehaviour
     public float timeLeft = 300;
     
     public TextMeshProUGUI timerText;
+
+    private void Start()
+    {
+        timeLeft -= Time.deltaTime;
+
+        string minutesLeft = Mathf.FloorToInt(timeLeft / 60).ToString();
+        string seconds = (timeLeft % 60).ToString("F0");
+        seconds = seconds.Length == 1 ? seconds = "0" + seconds : seconds;
+
+        timerText.text = minutesLeft + ":" + seconds;
+    }
     public void ScoreUpdate(int score)
     {
         scorePoints += score;
@@ -29,11 +40,11 @@ public class Score : MonoBehaviour
         {
             timeLeft -= Time.deltaTime * 2;
 
-            string minituesLeft = Mathf.FloorToInt(timeLeft / 60).ToString();
+            string minutesLeft = Mathf.FloorToInt(timeLeft / 60).ToString();
             string seconds = (timeLeft % 60).ToString("F0");
             seconds = seconds.Length == 1 ? seconds = "0" + seconds : seconds;
 
-            timerText.text = minituesLeft + ":" + seconds;
+            timerText.text = minutesLeft + ":" + seconds;
         }
 
         else

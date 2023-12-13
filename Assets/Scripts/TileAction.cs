@@ -10,7 +10,7 @@ public class TileAction : MonoBehaviour
     public List<Color> colorsList;
     Color ClickColor;
     public Rigidbody2D rb;
-    public float speed = 500f;
+    public float fallingSpeed = 500f;
     public bool isHit;
     public int scoreValue = 1;
     public LayerMask layerMask;
@@ -28,7 +28,7 @@ public class TileAction : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector3(0, -speed*Time.deltaTime, 0);
+        rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
     }
     void OnMouseOver()
     {
