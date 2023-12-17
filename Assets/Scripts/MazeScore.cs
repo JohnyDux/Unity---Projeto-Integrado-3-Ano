@@ -10,14 +10,30 @@ public class MazeScore : MonoBehaviour
     public float score;
     public TextMeshProUGUI scoreText;
 
+    public MazePlayerController player;
+    public TextMeshProUGUI lifesText;
+
     void Update()
     {
-        if(timeLeft > 0)
+        if(timeLeft > 0 && player.lifes > 0)
         {
             timeLeft -= Time.deltaTime;
             timeText.text = "Time Left: " + Mathf.Round(timeLeft).ToString();
         }
-        else
+
+        if (timeLeft > 0 && score == 5)
+        {
+            timeText.text = "You Won";
+            Time.timeScale = 0f;
+        }
+
+        if (player.lifes == 0)
+        {
+            timeText.text = "You Lost";
+            Time.timeScale = 0f;
+        }
+
+        if (timeLeft == 0 && score < 5)
         {
             timeText.text = "You Lost";
             Time.timeScale = 0f;
@@ -27,5 +43,7 @@ public class MazeScore : MonoBehaviour
     private void FixedUpdate()
     {
         scoreText.text = "Score: " + score.ToString();
+
+        lifesText.text = "Lifes: " + player.lifes.ToString();
     }
 }

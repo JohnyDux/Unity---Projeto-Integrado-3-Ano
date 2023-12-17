@@ -11,6 +11,8 @@ public class SettingsMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
+    public JsonReadWriteSystem jsonRead;
+
     Resolution[] resolutions;
 
     public int current_resolution;

@@ -8,6 +8,7 @@ TagManager:
   - border
   - Puzzle
   - Violinist
+  - AI
   layers:
   - Default
   - TransparentFX

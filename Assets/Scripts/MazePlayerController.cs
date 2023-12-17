@@ -10,6 +10,8 @@ public class MazePlayerController : MonoBehaviour
 
     Vector3 movement;
 
+    public int lifes = 3;
+
 
     void Update()
     {

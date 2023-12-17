@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
-    public MazeScore maze;
+    MazeScore maze;
+    private void Start()
+    {
+        string objectName = "Canvas";
+
+        GameObject foundObject = GameObject.Find(objectName);
+
+        maze = foundObject.GetComponent<MazeScore>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        maze.score = +1;
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            maze.score = maze.score + 1;
+            Destroy(gameObject);
+        } 
     }
 }

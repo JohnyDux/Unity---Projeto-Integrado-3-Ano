@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MazeAIChaser : MonoBehaviour
 {
-    public Transform player; // Reference to the player's transform
+    public GameObject player; // Reference to the player
     private NavMeshAgent navMeshAgent;
 
     void Start()
@@ -15,7 +15,7 @@ public class MazeAIChaser : MonoBehaviour
         // Ensure the player reference is set
         if (player == null)
         {
-            Debug.LogError("Player reference not set for EnemyAI script on " + gameObject.name);
+            player.GetComponent<MazePlayerController>();
         }
     }
 
@@ -25,7 +25,7 @@ public class MazeAIChaser : MonoBehaviour
         if (player != null)
         {
             // Set the destination to the player's position
-            navMeshAgent.SetDestination(player.position);
+            navMeshAgent.SetDestination(player.transform.position);
         }
     }
 
