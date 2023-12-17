@@ -7,16 +7,20 @@ public class DestroyerCheckers : MonoBehaviour
 {
     public int numberOfMisses;
     public Animator ViolinistAnimator;
+
+    public GameObject menuButton;
     private void Start()
     {
         numberOfMisses = 0;
+        menuButton.SetActive(false);
     }
 
     void Update()
     {
         if (numberOfMisses > 5)
         {
-            SceneManager.LoadScene("Main Menu");
+            Time.timeScale = 0f;
+            menuButton.SetActive(true);
         }
     }
 
@@ -29,5 +33,10 @@ public class DestroyerCheckers : MonoBehaviour
             ViolinistAnimator.SetBool("IsPlaying", false);
         } 
         Destroy(collision.gameObject);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

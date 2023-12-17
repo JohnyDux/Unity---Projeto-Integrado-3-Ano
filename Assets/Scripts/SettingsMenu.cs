@@ -13,6 +13,11 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
+    public int current_resolution;
+    public bool fullscreen;
+    public int current_quality;
+    public float current_volume;
+
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -43,20 +48,24 @@ public class SettingsMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        current_resolution = resolutionIndex;
     }
 
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        current_volume = volume;
     }
 
     public void SetQuality (int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        current_quality = qualityIndex;
     }
 
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        fullscreen = isFullscreen;
     }
 }

@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e23963129fcf14ab1f27df678f0429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 300
+  timeLeft: 60
   timerText: {fileID: 1054981342}
 --- !u!1 &1054981341
 GameObject:
@@ -405,6 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTransform: {fileID: 0}
   piecePrefab: {fileID: 4534269297313488278, guid: a29fc9540b9c54547a726ad9625bd593, type: 3}
+  emptyLocation: 0
   availableSprites:
   - {fileID: -505549736, guid: be2a4b6562090eb40b6873569b05e2b8, type: 3}
   - {fileID: -1504458718, guid: be2a4b6562090eb40b6873569b05e2b8, type: 3}

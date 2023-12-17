@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform piecePrefab;
 
     private List<Transform> pieces;
-    private int emptyLocation;
+    public int emptyLocation;
     private int size;
     private bool shuffling = false;
 
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(WaitShuffle(0.5f));
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale == 1f)
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit)

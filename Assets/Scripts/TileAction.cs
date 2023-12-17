@@ -15,14 +15,17 @@ public class TileAction : MonoBehaviour
     public int scoreValue = 1;
     public LayerMask layerMask;
 
-    Animator Violinist;
     public ParticleSystem SoundParticles;
     void Start()
     {
         isHit = false;
         color.color = StartColor;
         FindObjectOfType<Score>().ScoreUpdate(0);
-        Violinist = GameObject.FindGameObjectWithTag("Violinist").GetComponent<Animator>();
+
+        if (SoundParticles == null)
+        {
+            SoundParticles = GetComponent<ParticleSystem>();
+        }
     }
 
 
@@ -36,16 +39,10 @@ public class TileAction : MonoBehaviour
         {
             int rand = Random.Range(0, colorsList.Count);
             color.color = colorsList[rand];
+            StartParticleSystem();
 
             isHit = true;
             FindObjectOfType<Score>().ScoreUpdate(scoreValue);
-            Violinist.SetBool("IsPlaying", true);
-            SoundParticles.Play();
-        }
-
-        if (isHit)
-        {
-            SoundParticles.Play();
         }
     }
 
@@ -62,6 +59,14 @@ public class TileAction : MonoBehaviour
                 SceneManager.UnloadSceneAsync("Game");
                 SceneManager.LoadScene("Menu");
             }
+        }
+    }
+
+    void StartParticleSystem()
+    {
+        if (SoundParticles != null && !SoundParticles.isPlaying)
+        {
+            SoundParticles.Play();
         }
     }
 }

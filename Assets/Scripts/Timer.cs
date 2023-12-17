@@ -6,9 +6,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [Header("Time Left in Seconds")]
-    public float timeLeft = 300;
-
+    [Range(0, 300)] public float timeLeft;
     public TextMeshProUGUI timerText;
 
     public void Update()
@@ -26,6 +24,7 @@ public class Timer : MonoBehaviour
 
         else
         {
+            timerText.text = "You Lost";
             Time.timeScale = 0f;
         }
     }
