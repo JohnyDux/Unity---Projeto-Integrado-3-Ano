@@ -17,7 +17,9 @@ public class Score : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     public Animator ViolinistAnimator;
-    public ParticleSystem SoundParticles;
+    public ParticleSystem ViolinistSoundParticles;
+    public Animator BateristAnimator;
+    public ParticleSystem BateristSoundParticles;
     private void Start()
     {
         timeLeft -= Time.deltaTime;
@@ -28,9 +30,9 @@ public class Score : MonoBehaviour
 
         timerText.text = minutesLeft + ":" + seconds;
 
-        if (SoundParticles == null)
+        if (ViolinistSoundParticles == null)
         {
-            SoundParticles = GetComponent<ParticleSystem>();
+            ViolinistSoundParticles = GetComponent<ParticleSystem>();
         }
     }
     public int ScoreUpdate(int score)
@@ -48,12 +50,16 @@ public class Score : MonoBehaviour
         if(scorePoints > lastScore)
         {
             ViolinistAnimator.SetBool("IsPlaying", true);
-            StartParticleSystem();
+            BateristAnimator.SetBool("IsPlaying", true);
+            StartParticleSystem(ViolinistSoundParticles);
+            StartParticleSystem(BateristSoundParticles);
         }
         else
         {
             ViolinistAnimator.SetBool("IsPlaying", false);
-            StopParticleSystem();
+            BateristAnimator.SetBool("IsPlaying", false);
+            StopParticleSystem(ViolinistSoundParticles);
+            StopParticleSystem(BateristSoundParticles);
         }
 
         if (timeLeft > 0)
@@ -73,7 +79,7 @@ public class Score : MonoBehaviour
         }
     }
 
-    void StartParticleSystem()
+    void StartParticleSystem(ParticleSystem SoundParticles)
     {
         if (SoundParticles != null && !SoundParticles.isPlaying)
         {
@@ -81,7 +87,7 @@ public class Score : MonoBehaviour
         }
     }
 
-    void StopParticleSystem()
+    void StopParticleSystem(ParticleSystem SoundParticles)
     {
         if (SoundParticles != null && SoundParticles.isPlaying)
         {
