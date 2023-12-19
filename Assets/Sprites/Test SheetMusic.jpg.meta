@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: be2a4b6562090eb40b6873569b05e2b8
+guid: 9a60fe1b077786a4d852acd28c1ebae6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 031a909fc33eb4a459f261cfd632e76c
-      internalID: -505549736
+      spriteID: 365d8d174eb3ba341a4269a6b46f8f63
+      internalID: 752702117
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
         serializedVersion: 2
         x: 266
         y: 710
-        width: 266.33334
+        width: 266
         height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85973dbd7b37394eb63111cf914b5c4
-      internalID: -1504458718
+      spriteID: 6c4730d8f38bcfa4ea0da02dd9af8702
+      internalID: -1386472406
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd6bc2ce2c33e7047880a939d4c64aca
-      internalID: 2016472159
+      spriteID: a8ec1c843be2a12499ed3e322a1619ca
+      internalID: -1068275146
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a82587f3a294cb24599239b9a5694d97
-      internalID: -1245834461
+      spriteID: 567df30e2fcfe44458385c69936c7bff
+      internalID: -185491533
       vertices: []
       indices: 
       edges: []
@@ -192,9 +192,9 @@ TextureImporter:
       name: Test SheetMusic_4
       rect:
         serializedVersion: 2
-        x: 266
+        x: 270
         y: 355
-        width: 266.33334
+        width: 266
         height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f32ad5630fbfad4480715054c8f9b6b
-      internalID: -1044561352
+      spriteID: 13a56647cf8a8ec42ba597e181492013
+      internalID: 368049579
       vertices: []
       indices: 
       edges: []
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8141f26e2a864d4dba7fbd08fbe9734
-      internalID: -1570109511
+      spriteID: a1aa9df9985307e4d97f08f15cbd42fb
+      internalID: 1063312351
       vertices: []
       indices: 
       edges: []
@@ -245,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 792206dc688a44c4d87a61b310dc6bd1
-      internalID: 271630325
+      spriteID: d6133db949963f14aafd3b09b1ac833d
+      internalID: -660466132
       vertices: []
       indices: 
       edges: []
@@ -255,9 +255,9 @@ TextureImporter:
       name: Test SheetMusic_7
       rect:
         serializedVersion: 2
-        x: 266
+        x: 270
         y: 0
-        width: 266.33334
+        width: 266
         height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb9c752ab0e43a74d9142e3b12a83b93
-      internalID: -278658257
+      spriteID: 973942150c92755428838e2df00d8a8d
+      internalID: -1002091192
       vertices: []
       indices: 
       edges: []
@@ -287,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d57754308c6c6c4dbc452cb823d9784
-      internalID: -405877815
+      spriteID: 932a6db5892e8db4b90256304ebf3d47
+      internalID: 1140367166
       vertices: []
       indices: 
       edges: []
@@ -304,15 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Test SheetMusic_0: -505549736
-      Test SheetMusic_1: -1504458718
-      Test SheetMusic_2: 2016472159
-      Test SheetMusic_3: -1245834461
-      Test SheetMusic_4: -1044561352
-      Test SheetMusic_5: -1570109511
-      Test SheetMusic_6: 271630325
-      Test SheetMusic_7: -278658257
-      Test SheetMusic_8: -405877815
+      Test SheetMusic_0: 752702117
+      Test SheetMusic_1: -1386472406
+      Test SheetMusic_2: -1068275146
+      Test SheetMusic_3: -185491533
+      Test SheetMusic_4: 368049579
+      Test SheetMusic_5: 1063312351
+      Test SheetMusic_6: -660466132
+      Test SheetMusic_7: -1002091192
+      Test SheetMusic_8: 1140367166
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

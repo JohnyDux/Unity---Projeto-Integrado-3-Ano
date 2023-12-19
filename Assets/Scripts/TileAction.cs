@@ -16,11 +16,12 @@ public class TileAction : MonoBehaviour
     public LayerMask layerMask;
 
     public ParticleSystem SoundParticles;
+    Score scoreRef;
     void Start()
     {
         isHit = false;
         color.color = StartColor;
-        FindObjectOfType<Score>().ScoreUpdate(0);
+        scoreRef = FindObjectOfType<Score>();
 
         if (SoundParticles == null)
         {
@@ -40,9 +41,8 @@ public class TileAction : MonoBehaviour
             int rand = Random.Range(0, colorsList.Count);
             color.color = colorsList[rand];
             StartParticleSystem();
-
+            scoreRef.ScoreUpdate(1);
             isHit = true;
-            FindObjectOfType<Score>().ScoreUpdate(scoreValue);
         }
     }
 

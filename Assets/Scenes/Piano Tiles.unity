@@ -232,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141796182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7023783, y: 9.46, z: 0}
+  m_LocalPosition: {x: -7.28, y: 9.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -942,8 +942,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2133995231}
   scorePoints: 0
-  missText: {fileID: 1102159829}
-  check: {fileID: 953268109}
   timeLeft: 90
   timerText: {fileID: 1724141367}
   ViolinistAnimator: {fileID: 1000747127}
@@ -1023,6 +1021,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfMisses: 0
   ViolinistAnimator: {fileID: 1000747127}
+  BateristAnimator: {fileID: 1484374361734116294}
+  missText: {fileID: 1102159829}
   menuButton: {fileID: 1001543807}
 --- !u!95 &1000747127 stripped
 Animator:
@@ -1241,15 +1241,15 @@ RectTransform:
   m_GameObject: {fileID: 1102159827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.300003}
-  m_LocalScale: {x: 0.46684092, y: 0.46684092, z: 0.46684092}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.07, y: 1.07, z: 1.07}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1914379144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 6, y: 23}
+  m_AnchoredPosition: {x: 6, y: 45}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1102159829
@@ -1566,11 +1566,11 @@ RectTransform:
   m_Father: {fileID: 844834963}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -3, y: 11}
   m_SizeDelta: {x: 124.80469, y: 105.46875}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1709227763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,10 +1884,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2105,7 +2105,7 @@ RectTransform:
   m_GameObject: {fileID: 2133995229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.300003}
-  m_LocalScale: {x: 0.4668409, y: 0.4668409, z: 0.4668409}
+  m_LocalScale: {x: 1.07, y: 1.07, z: 1.07}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1914379144}

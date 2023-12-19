@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class DestroyerCheckers : MonoBehaviour
 {
     public int numberOfMisses;
     public Animator ViolinistAnimator;
+    public Animator BateristAnimator;
+
+    public TextMeshProUGUI missText;
 
     public GameObject menuButton;
     private void Start()
@@ -22,15 +27,18 @@ public class DestroyerCheckers : MonoBehaviour
             Time.timeScale = 0f;
             menuButton.SetActive(true);
         }
+
+        missText.text = numberOfMisses.ToString("0") + " Missed";
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         TileAction tile = collision.GetComponent<TileAction>();
-        if (!tile.isHit)
+        if (!tile.isHit && collision.CompareTag("piano"))
         {
             numberOfMisses++;
             ViolinistAnimator.SetBool("IsPlaying", false);
+            BateristAnimator.SetBool("IsPlaying", false);
         } 
         Destroy(collision.gameObject);
     }

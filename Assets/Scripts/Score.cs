@@ -9,8 +9,6 @@ public class Score : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public int scorePoints;
     int lastScore;
-    public TextMeshProUGUI missText;
-    public DestroyerCheckers check;
 
     [Header("Time Left in Seconds")]
     [Range(0, 90)] public float timeLeft;
@@ -40,8 +38,6 @@ public class Score : MonoBehaviour
         lastScore = scorePoints;
         scorePoints = lastScore + score;
         scoreText.text = scorePoints.ToString("0") + " Hit";
-
-        missText.text = check.numberOfMisses.ToString("0") + " Missed";
         return 0;
     }
 

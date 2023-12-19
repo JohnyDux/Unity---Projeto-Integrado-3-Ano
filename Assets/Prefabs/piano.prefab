@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4847,7 +4847,7 @@ Transform:
   m_GameObject: {fileID: 5867830164223099401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.088148, y: 0.09506142, z: 0}
-  m_LocalScale: {x: 1.7622563, y: 5.664375, z: 1}
+  m_LocalScale: {x: 1.7622563, y: 4.3190856, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8590060177387023236}

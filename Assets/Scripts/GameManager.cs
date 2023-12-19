@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     public List<Sprite> availableSprites = new List<Sprite>();
     private List<Sprite> usedSprites = new List<Sprite>();
+
+    public TextMeshProUGUI ClockTimer;
+    public GameObject Confetti;
 
     private void CreateGamePieces(float gapThickness)
     {
@@ -74,6 +78,7 @@ public class GameManager : MonoBehaviour
         pieces = new List<Transform>();
         size = 3;
         CreateGamePieces(0.01f);
+        Confetti.SetActive(false);
     }
 
     void Update()
@@ -81,7 +86,7 @@ public class GameManager : MonoBehaviour
         if(!shuffling && CheckCompletion())
         {
             shuffling = true;
-            StartCoroutine(WaitShuffle(0.5f));
+            StartCoroutine(WaitShuffle(5f));
         }
 
         if (Input.GetMouseButtonDown(0) && Time.timeScale == 1f)
@@ -117,20 +122,22 @@ public class GameManager : MonoBehaviour
 
     private bool CheckCompletion()
     {
-        for(int i = 0; i < pieces.Count; i++)
+        if(emptyLocation == 8)
         {
-            if (pieces[i].name != $"{i}"){
-                return false;
-            }
+            ClockTimer.text = "You Won";
+            Confetti.SetActive(true);
+            return true;
         }
-        return true;
+        else
+        {
+            return false;
+        }
     }
 
     private IEnumerator WaitShuffle(float duration)
     {
         yield return new WaitForSeconds(duration);
         Shuffle();
-        shuffling = false;
     }
 
     private void Shuffle()
