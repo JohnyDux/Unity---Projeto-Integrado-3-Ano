@@ -4847,7 +4847,7 @@ Transform:
   m_GameObject: {fileID: 5867830164223099401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.088148, y: 0.09506142, z: 0}
-  m_LocalScale: {x: 1.7622563, y: 4.3190856, z: 1}
+  m_LocalScale: {x: 1.6521152, y: 4.3190856, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8590060177387023236}
@@ -4986,7 +4986,7 @@ MonoBehaviour:
   - {r: 0.08497684, g: 0.3275165, b: 0.5849056, a: 1}
   - {r: 0.08235294, g: 0.23529412, b: 0.4, a: 1}
   rb: {fileID: 9159798266592408106}
-  fallingSpeed: 800
+  fallingSpeed: 200
   isHit: 0
   scoreValue: 1
   layerMask:

@@ -13,6 +13,15 @@ public class MazeScore : MonoBehaviour
     public MazePlayerController player;
     public TextMeshProUGUI lifesText;
 
+    public GameObject MenuButton;
+    public GameObject MusicSheetButton;
+
+    private void Start()
+    {
+        MenuButton.SetActive(false);
+        MusicSheetButton.SetActive(false);
+    }
+
     void Update()
     {
         if(timeLeft > 0 && player.lifes > 0)
@@ -25,18 +34,22 @@ public class MazeScore : MonoBehaviour
         {
             timeText.text = "You Won";
             Time.timeScale = 0f;
+            MenuButton.SetActive(true);
+            MusicSheetButton.SetActive(true);
         }
 
         if (player.lifes == 0)
         {
             timeText.text = "You Lost";
             Time.timeScale = 0f;
+            MenuButton.SetActive(true);
         }
 
         if (timeLeft == 0 && score < 5)
         {
             timeText.text = "You Lost";
             Time.timeScale = 0f;
+            MenuButton.SetActive(true);
         }
     }
 

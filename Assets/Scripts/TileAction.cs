@@ -11,6 +11,7 @@ public class TileAction : MonoBehaviour
     Color ClickColor;
     public Rigidbody2D rb;
     public float fallingSpeed = 500f;
+    public float incrementalSpeed = 2f;
     public bool isHit;
     public int scoreValue = 1;
     public LayerMask layerMask;
@@ -33,6 +34,7 @@ public class TileAction : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
+        fallingSpeed = fallingSpeed + incrementalSpeed;
     }
     void OnMouseOver()
     {
@@ -43,6 +45,8 @@ public class TileAction : MonoBehaviour
             StartParticleSystem();
             scoreRef.ScoreUpdate(1);
             isHit = true;
+
+            fallingSpeed = 500f;
         }
     }
 

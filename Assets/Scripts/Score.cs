@@ -10,6 +10,9 @@ public class Score : MonoBehaviour
     public int scorePoints;
     int lastScore;
 
+    [Header("Insert here the necessary points to win the level")]
+    public int pointsToWin;
+
     [Header("Time Left in Seconds")]
     [Range(0, 90)] public float timeLeft;
     public TextMeshProUGUI timerText;
@@ -71,6 +74,14 @@ public class Score : MonoBehaviour
 
         else
         {
+            if(scorePoints > pointsToWin)
+            {
+                timerText.text = "You Won";
+            }
+            else
+            {
+                timerText.text = "You Lost";
+            }
             Time.timeScale = 0f;
         }
     }

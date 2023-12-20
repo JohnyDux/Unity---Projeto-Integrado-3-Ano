@@ -8,6 +8,7 @@ public class MenuScript : MonoBehaviour
     public void LoadScene(string SceneName)
     {
         SceneManager.LoadScene(SceneName);
+        Time.timeScale = 1f;
     }
 
     public void ExitGame()
