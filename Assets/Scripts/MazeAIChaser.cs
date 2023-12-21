@@ -6,11 +6,10 @@ using UnityEngine.AI;
 public class MazeAIChaser : MonoBehaviour
 {
     public GameObject player; // Reference to the player
-    private NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
 
     void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
 
         // Ensure the player reference is set
         if (player == null)
@@ -26,6 +25,15 @@ public class MazeAIChaser : MonoBehaviour
         {
             // Set the destination to the player's position
             navMeshAgent.SetDestination(player.transform.position);
+        }
+
+        if(player.transform.position.magnitude - this.transform.position.magnitude < 10)
+        {
+            navMeshAgent.speed = 4f;
+        }
+        else if (player.transform.position.magnitude - this.transform.position.magnitude > 10)
+        {
+            navMeshAgent.speed = 2.5f;
         }
     }
 

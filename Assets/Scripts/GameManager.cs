@@ -11,13 +11,14 @@ public class GameManager : MonoBehaviour
     private List<Transform> pieces;
     public int emptyLocation;
     private int size;
-    private bool shuffling = false;
+    public bool shuffling = false;
 
     public List<Sprite> availableSprites = new List<Sprite>();
     private List<Sprite> usedSprites = new List<Sprite>();
 
     public TextMeshProUGUI ClockTimer;
     public GameObject Confetti;
+    public GameObject MenuButton;
 
     private void CreateGamePieces(float gapThickness)
     {
@@ -79,14 +80,18 @@ public class GameManager : MonoBehaviour
         size = 3;
         CreateGamePieces(0.01f);
         Confetti.SetActive(false);
+        MenuButton.SetActive(false);
+        Shuffle();
     }
 
     void Update()
     {
-        if(!shuffling && CheckCompletion())
+        if(CheckCompletion())
         {
-            shuffling = true;
-            StartCoroutine(WaitShuffle(5f));
+            ClockTimer.text = "You Won";
+            Confetti.SetActive(true);
+            MenuButton.SetActive(true);
+            Time.timeScale = 0f;
         }
 
         if (Input.GetMouseButtonDown(0) && Time.timeScale == 1f)
@@ -134,11 +139,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private IEnumerator WaitShuffle(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        Shuffle();
-    }
 
     private void Shuffle()
     {
@@ -164,5 +164,7 @@ public class GameManager : MonoBehaviour
                 count++;
             }
         }
+
+        shuffling = false;
     }
 }

@@ -1,23 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class TileAction : MonoBehaviour
 {
+    //Color of the tile
     public SpriteRenderer color;
     public Color StartColor;
     public List<Color> colorsList;
     Color ClickColor;
+
+    //Physics and Velocity
     public Rigidbody2D rb;
     public float fallingSpeed = 500f;
     public float incrementalSpeed = 2f;
+
+    //Trigger and Score
     public bool isHit;
+    Score scoreRef;
     public int scoreValue = 1;
     public LayerMask layerMask;
 
+    //Particles
     public ParticleSystem SoundParticles;
-    Score scoreRef;
+
     void Start()
     {
         isHit = false;

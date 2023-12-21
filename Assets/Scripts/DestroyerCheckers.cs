@@ -8,6 +8,7 @@ using TMPro;
 public class DestroyerCheckers : MonoBehaviour
 {
     public int numberOfMisses;
+    public int maxMisses = 20;
     public Animator ViolinistAnimator;
     public Animator BateristAnimator;
 
@@ -22,7 +23,7 @@ public class DestroyerCheckers : MonoBehaviour
 
     void Update()
     {
-        if (numberOfMisses > 5)
+        if (numberOfMisses > maxMisses)
         {
             Time.timeScale = 0f;
             menuButton.SetActive(true);
