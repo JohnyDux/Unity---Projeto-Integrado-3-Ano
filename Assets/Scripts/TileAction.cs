@@ -15,7 +15,7 @@ public class TileAction : MonoBehaviour
     //Physics and Velocity
     public Rigidbody2D rb;
     public float fallingSpeed = 500f;
-    public float incrementalSpeed = 2f;
+    public float incrementalSpeed = 0f;
 
     //Trigger and Score
     public bool isHit;
@@ -36,14 +36,16 @@ public class TileAction : MonoBehaviour
         {
             SoundParticles = GetComponent<ParticleSystem>();
         }
-    }
 
+        rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
+    }
 
     void Update()
     {
         rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
         fallingSpeed = fallingSpeed + incrementalSpeed;
     }
+
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && isHit == false)

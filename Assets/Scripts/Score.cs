@@ -88,7 +88,7 @@ public class Score : MonoBehaviour
             StopParticleSystem(BateristSoundParticles);
             StopParticleSystem(PianistSoundParticles);
 
-            targetVolume = 0.0f;
+            targetVolume = -80.0f;
         }
         ChangeVolumeOverTime(targetVolume);
 
@@ -121,7 +121,7 @@ public class Score : MonoBehaviour
             StopParticleSystem(BateristSoundParticles);
             StopParticleSystem(PianistSoundParticles);
 
-            targetVolume = 0.0f;
+            audioMixer.SetFloat("SoundEffects", -80);
             Time.timeScale = 0f;
         }
     }
@@ -145,7 +145,6 @@ public class Score : MonoBehaviour
     // Function to change volume over time
     void ChangeVolumeOverTime(float targetVolume)
     {
-        // Get the current volume of the Audio Mixer Group
         float currentVolume;
         audioMixer.GetFloat(mixerGroupName, out currentVolume);
 
