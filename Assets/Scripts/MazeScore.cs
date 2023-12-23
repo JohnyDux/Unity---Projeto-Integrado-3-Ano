@@ -10,7 +10,12 @@ public class MazeScore : MonoBehaviour
     public float score;
     public TextMeshProUGUI scoreText;
 
+    public GameObject LostScreen;
+    public GameObject WinScreen;
+    public GameObject Confetis;
+
     public MazePlayerController player;
+    public MazeAIChaser aIChaser;
     public TextMeshProUGUI lifesText;
 
     public GameObject MenuButton;
@@ -20,6 +25,9 @@ public class MazeScore : MonoBehaviour
     {
         MenuButton.SetActive(false);
         MusicSheetButton.SetActive(false);
+        WinScreen.SetActive(false);
+        LostScreen.SetActive(false);
+        Confetis.SetActive(false);
     }
 
     void Update()
@@ -32,24 +40,34 @@ public class MazeScore : MonoBehaviour
 
         if (timeLeft > 0 && score == 5)
         {
-            timeText.text = "You Won";
-            Time.timeScale = 0f;
+            timeText.text = "";
+            WinScreen.SetActive(true);
+            Confetis.SetActive(true);
             MenuButton.SetActive(true);
             MusicSheetButton.SetActive(true);
+
+            player.moveSpeed = 0f;
+            aIChaser.navMeshAgent.speed = 0f;
         }
 
         if (player.lifes == 0)
         {
-            timeText.text = "You Lost";
-            Time.timeScale = 0f;
+            timeText.text = "";
+            LostScreen.SetActive(true);
             MenuButton.SetActive(true);
+
+            player.moveSpeed = 0f;
+            aIChaser.navMeshAgent.speed = 0f;
         }
 
-        if (timeLeft == 0 && score < 5)
+        if (timeLeft <= 0 && score < 5)
         {
-            timeText.text = "You Lost";
-            Time.timeScale = 0f;
+            timeText.text = "";
+            LostScreen.SetActive(true);
             MenuButton.SetActive(true);
+
+            player.moveSpeed = 0f;
+            aIChaser.navMeshAgent.speed = 0f;
         }
     }
 

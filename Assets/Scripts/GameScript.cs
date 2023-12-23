@@ -9,6 +9,8 @@ public class GameScript : MonoBehaviour
 
     public List<Transform> puzzleTiles = new List<Transform>();
 
+    public int score = 0;
+
     void Start()
     {
         CollectPuzzleTiles();
@@ -17,7 +19,7 @@ public class GameScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && score < 8)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
@@ -74,14 +76,6 @@ public class GameScript : MonoBehaviour
             puzzleTiles[puzzleTiles.IndexOf(emptySpot)] = emptySpot;
         }
     }
-
-    bool IsAdjacent(Transform tileTransform, Transform emptySpot)
-    {
-        // Check if the tile is adjacent to the empty spot
-        float distance = Vector3.Distance(tileTransform.position, emptySpot.position);
-        return Mathf.Approximately(distance, tileSize);
-    }
-
 
     void OnDrawGizmos()
     {

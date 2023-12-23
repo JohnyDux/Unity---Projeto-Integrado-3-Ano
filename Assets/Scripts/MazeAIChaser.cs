@@ -25,6 +25,7 @@ public class MazeAIChaser : MonoBehaviour
         {
             // Set the destination to the player's position
             navMeshAgent.SetDestination(player.transform.position);
+            navMeshAgent.updateRotation = false;
         }
 
         if(player.transform.position.magnitude - this.transform.position.magnitude < 10)

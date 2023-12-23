@@ -16,17 +16,24 @@ public class Score : MonoBehaviour
     public int pointsToWin;
     public DestroyerCheckers checkers;
 
+    [Header("Win/Lost Screen Sprites")]
+    public GameObject WinScreen;
+    public GameObject LostScreen;
+    public GameObject WinConfetti;
+
     [Header("Time Left in Seconds")]
     [Range(0, 90)] public float timeLeft;
     public TextMeshProUGUI timerText;
 
-    [Header("Animation and Particles")]
+    [Header("Characters Animation and Particles")]
     public Animator ViolinistAnimator;
     public ParticleSystem ViolinistSoundParticles;
     public Animator BateristAnimator;
     public ParticleSystem BateristSoundParticles;
     public Animator PianistAnimator;
     public ParticleSystem PianistSoundParticles;
+    public Animator SaxophonistAnimator;
+    public ParticleSystem SaxophonistSoundParticles;
 
     [Header("Audio")]
     public AudioMixer audioMixer;
@@ -55,6 +62,9 @@ public class Score : MonoBehaviour
             audioMixerGroup = audioMixer.FindMatchingGroups(mixerGroupName)[0];
         }
 
+        WinScreen.SetActive(false);
+        LostScreen.SetActive(false);
+        WinConfetti.SetActive(false);
     }
     public int ScoreUpdate(int score)
     {
@@ -71,10 +81,12 @@ public class Score : MonoBehaviour
             ViolinistAnimator.SetBool("IsPlaying", true);
             BateristAnimator.SetBool("IsPlaying", true);
             PianistAnimator.SetBool("IsPlaying", true);
+            SaxophonistAnimator.SetBool("IsPlaying", true);
 
             StartParticleSystem(ViolinistSoundParticles);
             StartParticleSystem(BateristSoundParticles);
             StartParticleSystem(PianistSoundParticles);
+            StartParticleSystem(SaxophonistSoundParticles);
 
             targetVolume = 20.0f;
         }
@@ -83,10 +95,12 @@ public class Score : MonoBehaviour
             ViolinistAnimator.SetBool("IsPlaying", false);
             BateristAnimator.SetBool("IsPlaying", false);
             PianistAnimator.SetBool("IsPlaying", false);
+            SaxophonistAnimator.SetBool("IsPlaying", false);
 
             StopParticleSystem(ViolinistSoundParticles);
             StopParticleSystem(BateristSoundParticles);
             StopParticleSystem(PianistSoundParticles);
+            StopParticleSystem(SaxophonistSoundParticles);
 
             targetVolume = -80.0f;
         }
@@ -107,22 +121,26 @@ public class Score : MonoBehaviour
         {
             if(scorePoints > pointsToWin)
             {
-                timerText.text = "You Won";
+                WinScreen.SetActive(true);
+                WinConfetti.SetActive(true);
+                timerText.text = "";
             }
             else
             {
-                timerText.text = "You Lost";
+                LostScreen.SetActive(true);
+                timerText.text = "";
             }
             ViolinistAnimator.SetBool("IsPlaying", false);
             BateristAnimator.SetBool("IsPlaying", false);
             PianistAnimator.SetBool("IsPlaying", false);
+            SaxophonistAnimator.SetBool("IsPlaying", false);
 
             StopParticleSystem(ViolinistSoundParticles);
             StopParticleSystem(BateristSoundParticles);
             StopParticleSystem(PianistSoundParticles);
+            StopParticleSystem(SaxophonistSoundParticles);
 
             audioMixer.SetFloat("SoundEffects", -80);
-            Time.timeScale = 0f;
         }
     }
 

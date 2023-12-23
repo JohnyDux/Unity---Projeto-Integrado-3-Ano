@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfd578c116fb00740b4d7bd6e7aba539
+guid: 261401c1d43184a46ae1df61a4325e88
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,12 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_0
+      name: Saxophone_animacao_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 65
         y: 0
-        width: 488
+        width: 282
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -119,19 +119,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cf764328a2de2443a55a6ead312b06d
-      internalID: -1507948263
+      spriteID: 0a1fba5735182aa4780cf0388b8bf00c
+      internalID: 104814632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_1
+      name: Saxophone_animacao_1
       rect:
         serializedVersion: 2
-        x: 488
+        x: 440
         y: 0
-        width: 488
+        width: 283
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91dbb034997a3a047ad9e816b6281e9a
-      internalID: -1032244636
+      spriteID: c738c0533adf0794d9c2386ce89003dc
+      internalID: 1197679016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_2
+      name: Saxophone_animacao_2
       rect:
         serializedVersion: 2
-        x: 976
+        x: 850
         y: 0
-        width: 488
+        width: 292
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -161,19 +161,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b65edb43bb0afa340a82aa0aed64fac4
-      internalID: 2102353738
+      spriteID: 4c43b49ef0da2004e80b03c2d706ba3e
+      internalID: 263147776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_3
+      name: Saxophone_animacao_3
       rect:
         serializedVersion: 2
-        x: 1464
+        x: 1203
         y: 0
-        width: 488
+        width: 282
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2fb0644d69723b4d8b7a41df92ec0b3
-      internalID: -1030357132
+      spriteID: 351d6599d28bafb428bfde0fe77ca29d
+      internalID: -180328594
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: daca0c8155fec8c428c3b7c33f6bda0b
+    spriteID: b436459f699b511468252ccdd1bff4d6
     internalID: 0
     vertices: []
     indices: 
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprit_violinista_corrigido 1_0: -1507948263
-      sprit_violinista_corrigido 1_1: -1032244636
-      sprit_violinista_corrigido 1_2: 2102353738
-      sprit_violinista_corrigido 1_3: -1030357132
+      Saxophone_animacao_0: 104814632
+      Saxophone_animacao_1: 1197679016
+      Saxophone_animacao_2: 263147776
+      Saxophone_animacao_3: -180328594
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

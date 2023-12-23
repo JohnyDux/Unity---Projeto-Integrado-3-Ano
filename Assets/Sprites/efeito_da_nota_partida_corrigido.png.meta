@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfd578c116fb00740b4d7bd6e7aba539
+guid: 950d25001ea1b644b98121e646841cad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_0
+      name: efeito_da_nota_partida_corrigido_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 488
-        height: 1080
+        width: 542.2
+        height: 897
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cf764328a2de2443a55a6ead312b06d
-      internalID: -1507948263
+      spriteID: 27f29f39cb4368a4797ddb28ff18d0d7
+      internalID: 1838240042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_1
+      name: efeito_da_nota_partida_corrigido_1
       rect:
         serializedVersion: 2
-        x: 488
+        x: 542
         y: 0
-        width: 488
-        height: 1080
+        width: 601
+        height: 897
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91dbb034997a3a047ad9e816b6281e9a
-      internalID: -1032244636
+      spriteID: d2a7cf7c4a407ab4e80d26e45a833126
+      internalID: 1008818686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_2
+      name: efeito_da_nota_partida_corrigido_2
       rect:
         serializedVersion: 2
-        x: 976
+        x: 1143
         y: 0
-        width: 488
-        height: 1080
+        width: 608
+        height: 897
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b65edb43bb0afa340a82aa0aed64fac4
-      internalID: 2102353738
+      spriteID: eecddf37b8ed5aa4b9e7391f0c2e708e
+      internalID: 346247354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_3
+      name: efeito_da_nota_partida_corrigido_3
       rect:
         serializedVersion: 2
-        x: 1464
+        x: 1751
         y: 0
-        width: 488
-        height: 1080
+        width: 542
+        height: 897
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2fb0644d69723b4d8b7a41df92ec0b3
-      internalID: -1030357132
+      spriteID: 6eebbe9ac1d9d2544b02397733c5163b
+      internalID: -1111071339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: efeito_da_nota_partida_corrigido_4
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 0
+        width: 419
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db1bbdc459a4254da88c156eb612f59
+      internalID: 1558025949
       vertices: []
       indices: 
       edges: []
@@ -191,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: daca0c8155fec8c428c3b7c33f6bda0b
+    spriteID: ca08a09529cc218469da19aa26be10d9
     internalID: 0
     vertices: []
     indices: 
@@ -199,10 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprit_violinista_corrigido 1_0: -1507948263
-      sprit_violinista_corrigido 1_1: -1032244636
-      sprit_violinista_corrigido 1_2: 2102353738
-      sprit_violinista_corrigido 1_3: -1030357132
+      efeito_da_nota_partida_corrigido_0: 1838240042
+      efeito_da_nota_partida_corrigido_1: 1008818686
+      efeito_da_nota_partida_corrigido_2: 346247354
+      efeito_da_nota_partida_corrigido_3: -1111071339
+      efeito_da_nota_partida_corrigido_4: 1558025949
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

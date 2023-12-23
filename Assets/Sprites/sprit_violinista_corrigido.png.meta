@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfd578c116fb00740b4d7bd6e7aba539
+guid: 7e8245cc75f21a746b4c21f1b7e0af25
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,85 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_0
+      name: sprit_violinista_corrigido_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 488
-        height: 1080
+        y: 2921.25
+        width: 513
+        height: 973.75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cf764328a2de2443a55a6ead312b06d
-      internalID: -1507948263
+      spriteID: 1fa9598791650d64fb7d862d78b42c16
+      internalID: 489210856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_1
+      name: sprit_violinista_corrigido_1
       rect:
         serializedVersion: 2
-        x: 488
-        y: 0
-        width: 488
-        height: 1080
+        x: 0
+        y: 1940
+        width: 513
+        height: 974
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91dbb034997a3a047ad9e816b6281e9a
-      internalID: -1032244636
+      spriteID: 3fc0546f8c107144f82b2857a256f104
+      internalID: -1022087738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_2
+      name: sprit_violinista_corrigido_2
       rect:
         serializedVersion: 2
-        x: 976
-        y: 0
-        width: 488
-        height: 1080
+        x: 0
+        y: 990
+        width: 513
+        height: 949
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b65edb43bb0afa340a82aa0aed64fac4
-      internalID: 2102353738
+      spriteID: 117782188396fc647b694c9b3d0c4258
+      internalID: 1066236109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprit_violinista_corrigido 1_3
+      name: sprit_violinista_corrigido_3
       rect:
         serializedVersion: 2
-        x: 1464
-        y: 0
-        width: 488
-        height: 1080
+        x: 0
+        y: 14
+        width: 513
+        height: 974
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2fb0644d69723b4d8b7a41df92ec0b3
-      internalID: -1030357132
+      spriteID: 8fed9f479ec35544ab8b3017e5837bdb
+      internalID: 1081503237
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: daca0c8155fec8c428c3b7c33f6bda0b
+    spriteID: 71ae30ba22f7a7348867f58a38e8ae52
     internalID: 0
     vertices: []
     indices: 
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprit_violinista_corrigido 1_0: -1507948263
-      sprit_violinista_corrigido 1_1: -1032244636
-      sprit_violinista_corrigido 1_2: 2102353738
-      sprit_violinista_corrigido 1_3: -1030357132
+      sprit_violinista_corrigido_0: 489210856
+      sprit_violinista_corrigido_1: -1022087738
+      sprit_violinista_corrigido_2: 1066236109
+      sprit_violinista_corrigido_3: 1081503237
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
