@@ -18,7 +18,9 @@ public class SettingsMenu : MonoBehaviour
     public int current_resolution;
     public bool fullscreen;
     public int current_quality;
-    public float current_volume;
+    public float current_masterVolume;
+    public float current_musicVolume;
+    public float current_soundFXVolume;
 
     void Start()
     {
@@ -59,10 +61,20 @@ public class SettingsMenu : MonoBehaviour
         current_resolution = resolutionIndex;
     }
 
-    public void SetVolume (float volume)
+    public void SetMasterVolume (float volume)
     {
-        audioMixer.SetFloat("volume", volume);
-        current_volume = volume;
+        audioMixer.SetFloat("Master", volume);
+        current_masterVolume = volume;
+    }
+    public void SetMusicVolume (float volume)
+    {
+        audioMixer.SetFloat("Music", volume);
+        current_musicVolume = volume;
+    }
+    public void SetSoundFXVolume (float volume)
+    {
+        audioMixer.SetFloat("SoundEffects", volume);
+        current_soundFXVolume = volume;
     }
 
     public void SetQuality (int qualityIndex)

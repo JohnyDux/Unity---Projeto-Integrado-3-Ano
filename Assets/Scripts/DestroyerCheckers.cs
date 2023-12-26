@@ -13,7 +13,6 @@ public class DestroyerCheckers : MonoBehaviour
     public Animator BateristAnimator;
 
     public TextMeshProUGUI missText;
-    public ParticleSystem brokenMusicNote;
 
     public GameObject menuButton;
     private void Start()
@@ -39,7 +38,6 @@ public class DestroyerCheckers : MonoBehaviour
         if (!tile.isHit && collision.CompareTag("piano"))
         {
             numberOfMisses++;
-            StartParticleSystem();
             Destroy(collision.gameObject);
             ViolinistAnimator.SetBool("IsPlaying", false);
             BateristAnimator.SetBool("IsPlaying", false);
@@ -53,21 +51,5 @@ public class DestroyerCheckers : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("Main Menu");
-    }
-
-    void StartParticleSystem()
-    {
-        if (brokenMusicNote != null && !brokenMusicNote.isPlaying)
-        {
-            brokenMusicNote.Play();
-        }
-    }
-
-    void StopParticleSystem()
-    {
-        if (brokenMusicNote != null && brokenMusicNote.isPlaying)
-        {
-            brokenMusicNote.Stop();
-        }
     }
 }
