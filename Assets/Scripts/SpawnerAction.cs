@@ -14,6 +14,8 @@ public class SpawnerAction : MonoBehaviour
 
     Transform freeposition;
 
+    public Score score;
+
     void Start()
     {
         spawner();
@@ -26,7 +28,7 @@ public class SpawnerAction : MonoBehaviour
 
     void Update()
     {
-        if (checkforempty())
+        if (checkforempty() && score.timeLeft > 0)
         {
             spawner();
         }

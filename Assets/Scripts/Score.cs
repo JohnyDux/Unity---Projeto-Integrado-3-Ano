@@ -35,6 +35,8 @@ public class Score : MonoBehaviour
     public Animator SaxophonistAnimator;
     public ParticleSystem SaxophonistSoundParticles;
 
+    public TileAction pianoTile;
+
     [Header("Audio")]
     public AudioMixer audioMixer;
     public string mixerGroupName;
@@ -61,6 +63,8 @@ public class Score : MonoBehaviour
             // Get the Audio Mixer Group by name
             audioMixerGroup = audioMixer.FindMatchingGroups(mixerGroupName)[0];
         }
+
+        pianoTile.fallingSpeed = 100f;
 
         WinScreen.SetActive(false);
         LostScreen.SetActive(false);
@@ -119,27 +123,44 @@ public class Score : MonoBehaviour
 
         else
         {
-            if(scorePoints > pointsToWin)
+            if (scorePoints > pointsToWin)
             {
                 WinScreen.SetActive(true);
                 WinConfetti.SetActive(true);
+                LostScreen.SetActive(false);
                 timerText.text = "";
+
+                ViolinistAnimator.SetBool("IsPlaying", false);
+                BateristAnimator.SetBool("IsPlaying", false);
+                PianistAnimator.SetBool("IsPlaying", false);
+                SaxophonistAnimator.SetBool("IsPlaying", false);
+
+                StopParticleSystem(ViolinistSoundParticles);
+                StopParticleSystem(BateristSoundParticles);
+                StopParticleSystem(PianistSoundParticles);
+                StopParticleSystem(SaxophonistSoundParticles);
+
+                pianoTile.fallingSpeed = 0f;
             }
             else
             {
+                WinScreen.SetActive(false);
+                WinConfetti.SetActive(false);
                 LostScreen.SetActive(true);
                 timerText.text = "";
+
+                ViolinistAnimator.SetBool("IsPlaying", false);
+                BateristAnimator.SetBool("IsPlaying", false);
+                PianistAnimator.SetBool("IsPlaying", false);
+                SaxophonistAnimator.SetBool("IsPlaying", false);
+
+                StopParticleSystem(ViolinistSoundParticles);
+                StopParticleSystem(BateristSoundParticles);
+                StopParticleSystem(PianistSoundParticles);
+                StopParticleSystem(SaxophonistSoundParticles);
+
+                pianoTile.fallingSpeed = 0f;
             }
-            ViolinistAnimator.SetBool("IsPlaying", false);
-            BateristAnimator.SetBool("IsPlaying", false);
-            PianistAnimator.SetBool("IsPlaying", false);
-            SaxophonistAnimator.SetBool("IsPlaying", false);
-
-            StopParticleSystem(ViolinistSoundParticles);
-            StopParticleSystem(BateristSoundParticles);
-            StopParticleSystem(PianistSoundParticles);
-            StopParticleSystem(SaxophonistSoundParticles);
-
             audioMixer.SetFloat("SoundEffects", -80);
         }
     }

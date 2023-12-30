@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141796182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9, y: 22.6, z: 0}
+  m_LocalPosition: {x: -6.44, y: 22.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -345,6 +345,7 @@ MonoBehaviour:
   delay: 0.2
   min: -5
   max: 10
+  score: {fileID: 844834964}
 --- !u!1 &158746647
 GameObject:
   m_ObjectHideFlags: 0
@@ -5689,7 +5690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469716914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2800007, y: 11.36, z: 0}
+  m_LocalPosition: {x: -1.96, y: 11.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5819,7 +5820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529504514}
   m_LocalRotation: {x: -0, y: -0, z: -0.73464686, w: 0.6784497}
-  m_LocalPosition: {x: -2.2800007, y: 19.155117, z: 0}
+  m_LocalPosition: {x: -1.96, y: 19.155117, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15871,6 +15872,7 @@ MonoBehaviour:
   PianistSoundParticles: {fileID: 556468195}
   SaxophonistAnimator: {fileID: 1242937045}
   SaxophonistSoundParticles: {fileID: 2101106787}
+  pianoTile: {fileID: 2201618343645909736, guid: aac14c69cdffc214092af295bbb2f7cf, type: 3}
   audioMixer: {fileID: 24100000, guid: 5fb472a78b3c13b4193467e397e8bb7c, type: 2}
   mixerGroupName: SoundEffects
   volumeChangeSpeed: 1
@@ -17701,11 +17703,11 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 1838240042, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 1008818686, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 346247354, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: -1111071339, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 1558025949, guid: 950d25001ea1b644b98121e646841cad, type: 3}
+    - sprite: {fileID: -962849867, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 1393592704, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 936268432, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: -287257499, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 1240646150, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -20998,7 +21000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1644, y: 93}
+  m_AnchoredPosition: {x: 1644, y: 134}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1102159829
@@ -26339,7 +26341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fb314df39084eac45815aef23aae2d00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f6d37181732bf0459e59b6553cf8285, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26382,7 +26384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285165926}
   m_LocalRotation: {x: -0, y: -0, z: -0.73464686, w: 0.6784497}
-  m_LocalPosition: {x: -2.2800007, y: 26.61, z: 0}
+  m_LocalPosition: {x: -1.96, y: 26.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28145,11 +28147,11 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 1838240042, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 1008818686, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 346247354, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: -1111071339, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 1558025949, guid: 950d25001ea1b644b98121e646841cad, type: 3}
+    - sprite: {fileID: -962849867, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 1393592704, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 936268432, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: -287257499, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 1240646150, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -31524,7 +31526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650892698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.28, y: 0, z: 0}
+  m_LocalPosition: {x: -1.96, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53142,11 +53144,11 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 1838240042, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 1008818686, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 346247354, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: -1111071339, guid: 950d25001ea1b644b98121e646841cad, type: 3}
-    - sprite: {fileID: 1558025949, guid: 950d25001ea1b644b98121e646841cad, type: 3}
+    - sprite: {fileID: -962849867, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 1393592704, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 936268432, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: -287257499, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
+    - sprite: {fileID: 1240646150, guid: 3e02e6b7d89b74144a0bb8ed8ee3bc88, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -56662,7 +56664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1111, y: 93}
+  m_AnchoredPosition: {x: 1111, y: 133.99997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2133995231

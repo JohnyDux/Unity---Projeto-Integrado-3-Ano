@@ -1,0 +1,915 @@
+fileFormatVersion: 2
+guid: 660f86a1c8b554447aebf3d97555a717
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: partitura_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 887.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c4720966532284ca7701a8f1155d41
+      internalID: -117551762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 887.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbf6716740690647b7bf02868841e14
+      internalID: 1803292788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 887.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6fdbd7e138e1a4ca3d31237b076934
+      internalID: -441222162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 887.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894efe4492dc4bb47ad930b7c681f067
+      internalID: -433303458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 887.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d4fc493d9a5c749adb0a74ef09cf66
+      internalID: 1237474554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 887.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd2017223440d848924c5b2c5dfc735
+      internalID: -469533555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 710.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9632961ec2b9b4d8593e1bd9bedbaf
+      internalID: -1721742403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 710.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02778c568297a447b47e6cbe2e176c7
+      internalID: 549766634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 710.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c45da00594640e49993d4f0e7040488
+      internalID: 586068999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_9
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 710.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81fd11d606fe164d88e69437401504a
+      internalID: -755256926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_10
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 710.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24c05a0d32b1ca489a920b895664b4e
+      internalID: 1116954322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_11
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 710.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103476e3edf37ed42a8affd0e3fd3505
+      internalID: -130623313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 533.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9f6cbc47ee1b2488bb3e3a5978786e
+      internalID: 664143235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_13
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 533.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9785ede8a94025741bbc86f674c1f914
+      internalID: -594369955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 533.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d60ba2f19de484fa0464af87ff37ba
+      internalID: -343149297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 533.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df930324a0e84c445b3cb8726940c3c0
+      internalID: 736883596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_16
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 533.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6897bfaa0486c46479fb88e6c3525739
+      internalID: -419028591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_17
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 533.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467c154e80fb93947bfb705900319f66
+      internalID: 1214018975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 356.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7d21e28662fde478fa5a520b4cff86
+      internalID: -2128883803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_19
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 356.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044e4b34405a29a479f8920f8ad3b2e7
+      internalID: 469299631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_20
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 356.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619880d1e2b8aa545928188e1bf72dda
+      internalID: 1193834640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_21
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 356.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd60ba04aa00cc44a799a4df27a48d8
+      internalID: 3934866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_22
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 356.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcecc34c2f52bfe46b24d7145b9d908b
+      internalID: 1312868438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_23
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 356.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caee5a8781b42d0478627479145d860f
+      internalID: -37174410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d61c3fd78fd94c479d1dfc385659abc
+      internalID: -1211687704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_25
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 179.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b5d38804f09cd4f80b86343da6c558
+      internalID: 766447923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_26
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 179.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca694d63b692334e997a80ea7d7064a
+      internalID: 1814747006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 179.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c31d3f60256e441a9876d0eeaba05b
+      internalID: -756767073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_28
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 179.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f91eb52561ac3e44820a693c7c6ca50
+      internalID: -1891460534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_29
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 179.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725d4cd897535a6469821e7117c7c818
+      internalID: -1214231443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b3163092aa98348a46af0775923b7c
+      internalID: -2023403312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_31
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50f934d044eacb4ab2cfa1ba2eba80d
+      internalID: 613530532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_32
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3172adb62196d44a6de603b615ebab
+      internalID: -808700749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_33
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f433890827e23cb4c9f290e25c15e822
+      internalID: -1688477720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_34
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6482d3f40b7197448e37f77e6c3d609
+      internalID: -1417075673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: partitura_35
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 2.5
+        width: 133.16667
+        height: 177.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1845aa0ce0550fa45be3f0b75ef78fad
+      internalID: 115415311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      partitura_0: -117551762
+      partitura_1: 1803292788
+      partitura_10: 1116954322
+      partitura_11: -130623313
+      partitura_12: 664143235
+      partitura_13: -594369955
+      partitura_14: -343149297
+      partitura_15: 736883596
+      partitura_16: -419028591
+      partitura_17: 1214018975
+      partitura_18: -2128883803
+      partitura_19: 469299631
+      partitura_2: -441222162
+      partitura_20: 1193834640
+      partitura_21: 3934866
+      partitura_22: 1312868438
+      partitura_23: -37174410
+      partitura_24: -1211687704
+      partitura_25: 766447923
+      partitura_26: 1814747006
+      partitura_27: -756767073
+      partitura_28: -1891460534
+      partitura_29: -1214231443
+      partitura_3: -433303458
+      partitura_30: -2023403312
+      partitura_31: 613530532
+      partitura_32: -808700749
+      partitura_33: -1688477720
+      partitura_34: -1417075673
+      partitura_35: 115415311
+      partitura_4: 1237474554
+      partitura_5: -469533555
+      partitura_6: -1721742403
+      partitura_7: 549766634
+      partitura_8: 586068999
+      partitura_9: -755256926
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
