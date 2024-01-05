@@ -16057,7 +16057,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main Menu
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1001543810
@@ -26588,6 +26588,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1450960717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450960719}
+  - component: {fileID: 1450960718}
+  m_Layer: 0
+  m_Name: SettingsReference
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450960718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450960717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7a8f8fcebacae4ab99675e6034d3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 5fb472a78b3c13b4193467e397e8bb7c, type: 2}
+  resolutionDropdown: {fileID: 994065441900865373, guid: 4f2dfc3a6330f654c9844afd13ee8941, type: 3}
+  settingsRead:
+    resolutionId: 0
+    graphicsId: 0
+    masterVolumeValue: 0
+    musicValue: 0
+    soundFxValue: 0
+    fullscreenValue: 0
+  current_resolution: 0
+  fullscreen: 0
+  current_quality: 0
+  current_masterVolume: 0
+  current_musicVolume: 0
+  current_soundFXVolume: 0
+--- !u!4 &1450960719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450960717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.333693, y: 3.6468287, z: 1.6548127}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485490203
 GameObject:
   m_ObjectHideFlags: 0
@@ -36960,6 +37019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72972cb18c1cf1240a34fbfab4ce474a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsRef: {fileID: 1450960718}
 --- !u!1 &1975107545
 GameObject:
   m_ObjectHideFlags: 0

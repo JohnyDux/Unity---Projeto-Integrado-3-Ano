@@ -713,7 +713,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 5fb472a78b3c13b4193467e397e8bb7c, type: 2}
   resolutionDropdown: {fileID: 994065441900865373, guid: 4f2dfc3a6330f654c9844afd13ee8941, type: 3}
-  jsonRead: {fileID: 818809462}
+  settingsRead:
+    resolutionId: 0
+    graphicsId: 0
+    masterVolumeValue: 0
+    musicValue: 0
+    soundFxValue: 0
+    fullscreenValue: 0
   current_resolution: 0
   fullscreen: 0
   current_quality: 0
@@ -1173,6 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72972cb18c1cf1240a34fbfab4ce474a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsRef: {fileID: 394570080}
 --- !u!114 &818809458
 MonoBehaviour:
   m_ObjectHideFlags: 0
