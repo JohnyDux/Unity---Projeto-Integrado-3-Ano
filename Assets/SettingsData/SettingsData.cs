@@ -5,6 +5,8 @@ public class SettingsData
 {
     public int resolutionId;
     public int graphicsId;
-    public float volumeValue;
+    public float masterVolumeValue;
+    public float musicValue;
+    public float soundFxValue;
     public bool fullscreenValue;
 }

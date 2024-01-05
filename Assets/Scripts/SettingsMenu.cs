@@ -11,7 +11,7 @@ public class SettingsMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
-    public JsonReadWriteSystem jsonRead;
+    public SettingsData settingsRead;
 
     Resolution[] resolutions;
 
@@ -25,8 +25,9 @@ public class SettingsMenu : MonoBehaviour
     void Start()
     {
         resolutions = Screen.resolutions;
+        current_quality = ((int)Graphics.activeTier);
 
-        if(resolutionDropdown != null)
+        if (resolutionDropdown != null)
         {
             resolutionDropdown.ClearOptions();
         }
@@ -52,6 +53,13 @@ public class SettingsMenu : MonoBehaviour
             resolutionDropdown.value = currentResolutionIndex;
             resolutionDropdown.RefreshShownValue();
         }
+
+        SetResolution(settingsRead.resolutionId);
+        SetMasterVolume(settingsRead.masterVolumeValue);
+        SetMusicVolume(settingsRead.musicValue);
+        SetSoundFXVolume(settingsRead.soundFxValue);
+        SetQuality(settingsRead.graphicsId);
+        SetFullscreen(settingsRead.fullscreenValue);
     }
 
     public void SetResolution(int resolutionIndex)
@@ -59,6 +67,11 @@ public class SettingsMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         current_resolution = resolutionIndex;
+    }
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+        current_quality = qualityIndex;
     }
 
     public void SetMasterVolume (float volume)
@@ -75,12 +88,6 @@ public class SettingsMenu : MonoBehaviour
     {
         audioMixer.SetFloat("SoundEffects", volume);
         current_soundFXVolume = volume;
-    }
-
-    public void SetQuality (int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-        current_quality = qualityIndex;
     }
 
     public void SetFullscreen (bool isFullscreen)

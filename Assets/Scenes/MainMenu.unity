@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 5fb472a78b3c13b4193467e397e8bb7c, type: 2}
-  resolutionDropdown: {fileID: 0}
+  resolutionDropdown: {fileID: 994065441900865373, guid: 4f2dfc3a6330f654c9844afd13ee8941, type: 3}
   jsonRead: {fileID: 818809462}
   current_resolution: 0
   fullscreen: 0
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: POLARIS
+  m_text: DIAMOND
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d1fb6b93bb51dbc4f928b718ac10a37b, type: 2}
   m_sharedMaterial: {fileID: 5602029755008869508, guid: d1fb6b93bb51dbc4f928b718ac10a37b, type: 2}
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.6
+  m_fontSize: 44.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1277,7 +1277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 994065441900865373, guid: 4f2dfc3a6330f654c9844afd13ee8941, type: 3}
   graphicsDropdown: {fileID: 6393049248026791284, guid: 68e0ebed94a04974482bea2ab3f3f145, type: 3}
-  volumeSlider: {fileID: 7599495469096092960, guid: 08ac974085c964440a2b9c513c6f2479, type: 3}
+  masterVolumeSlider: {fileID: 3689167065955381238, guid: 61a9361480d78b845ab654a391023798, type: 3}
+  musicVolumeSlider: {fileID: 2067883844030947190, guid: 2f82cc3c7b4866545b5bf7d313b8c808, type: 3}
+  soundFxVolumeSlider: {fileID: 5878135695210853470, guid: a83b50c2bb3cb314e9140f942b716bd2, type: 3}
   fullscreenToggle: {fileID: 2475373962236336760, guid: ace1b46bb96dce44288cc36f2bfe65b4, type: 3}
 --- !u!1 &1129134497
 GameObject:

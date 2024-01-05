@@ -7,7 +7,9 @@ public class JsonReadWriteSystem : MonoBehaviour
 {
     public TMP_Dropdown resolutionDropdown;
     public TMP_Dropdown graphicsDropdown;
-    public Slider volumeSlider;
+    public Slider masterVolumeSlider;
+    public Slider musicVolumeSlider;
+    public Slider soundFxVolumeSlider;
     public Toggle fullscreenToggle;
 
     string fullPath;
@@ -16,7 +18,9 @@ public class JsonReadWriteSystem : MonoBehaviour
         SettingsData data = new SettingsData();
         data.resolutionId = resolutionDropdown.value;
         data.graphicsId = graphicsDropdown.value;
-        data.volumeValue = volumeSlider.value;
+        data.masterVolumeValue = masterVolumeSlider.value;
+        data.musicValue = musicVolumeSlider.value;
+        data.soundFxValue = soundFxVolumeSlider.value;
         data.fullscreenValue = fullscreenToggle.isOn;
 
         string folderPath = "SettingsData";
@@ -36,7 +40,9 @@ public class JsonReadWriteSystem : MonoBehaviour
 
         resolutionDropdown.value = data.resolutionId;
         graphicsDropdown.value = data.graphicsId;
-        volumeSlider.value = data.volumeValue;
+        masterVolumeSlider.value = data.masterVolumeValue;
+        musicVolumeSlider.value = data.musicValue;
+        soundFxVolumeSlider.value = data.soundFxValue;
         fullscreenToggle.isOn = data.fullscreenValue;
     }
 
