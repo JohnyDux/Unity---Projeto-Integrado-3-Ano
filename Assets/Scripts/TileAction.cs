@@ -48,15 +48,22 @@ public class TileAction : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && isHit == false)
+        if(Time.timeScale == 1f)
         {
-            int rand = Random.Range(0, colorsList.Count);
-            color.color = colorsList[rand];
-            StartParticleSystem();
-            scoreRef.ScoreUpdate(1);
-            isHit = true;
+            if (Input.GetMouseButtonDown(0) && isHit == false)
+            {
+                int rand = Random.Range(0, colorsList.Count);
+                color.color = colorsList[rand];
+                StartParticleSystem();
+                scoreRef.ScoreUpdate(1);
+                isHit = true;
 
-            fallingSpeed = 1000f;
+                fallingSpeed = 1000f;
+            }
+        }
+        else
+        {
+            fallingSpeed = 0f;
         }
     }
 

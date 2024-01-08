@@ -72,10 +72,17 @@ public class Score : MonoBehaviour
     }
     public int ScoreUpdate(int score)
     {
-        lastScore = scorePoints;
-        scorePoints = lastScore + score;
-        scoreText.text = scorePoints.ToString("0") + " Hit";
-        return 0;
+        if(timeLeft > 0)
+        {
+            lastScore = scorePoints;
+            scorePoints = lastScore + score;
+            scoreText.text = scorePoints.ToString("0") + " Hit";
+            return 0;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     public void Update()
