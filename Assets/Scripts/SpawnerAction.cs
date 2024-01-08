@@ -8,7 +8,7 @@ public class SpawnerAction : MonoBehaviour
     public float width = 10f;
     public float height = 5f;
     public GameObject pianoTile;
-    public float delay = 0.5f;
+    public float startDelay = 0.5f;
     public float min = -5f;
     public float max = 10f;
 
@@ -47,15 +47,15 @@ public class SpawnerAction : MonoBehaviour
         }
         if (freeposition)
         {
-            Invoke("spawnuntill", delay);
+            Invoke("spawnuntill", startDelay);
         }
     }
 
     void spawner()
     {
-        delay -= Time.deltaTime;
+        startDelay -= Time.deltaTime;
 
-        if (delay <= 0)
+        if (startDelay <= 0)
         {
             foreach (Transform child in transform)
             {

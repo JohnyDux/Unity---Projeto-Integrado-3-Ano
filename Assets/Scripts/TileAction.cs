@@ -36,7 +36,7 @@ public class TileAction : MonoBehaviour
             SoundParticles = GetComponent<ParticleSystem>();
         }
 
-        fallingSpeed = Random.Range(100f, 300f);
+        fallingSpeed = Random.Range(1000f, 2000f);
 
         rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
     }
@@ -56,7 +56,7 @@ public class TileAction : MonoBehaviour
             scoreRef.ScoreUpdate(1);
             isHit = true;
 
-            fallingSpeed = 500f;
+            fallingSpeed = 1000f;
         }
     }
 
