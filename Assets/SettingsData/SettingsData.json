@@ -1,8 +1,8 @@
 {
-    "resolutionId": 16,
-    "graphicsId": 2,
-    "masterVolumeValue": 20.0,
-    "musicValue": 20.0,
-    "soundFxValue": 20.0,
+    "resolutionId": 10,
+    "graphicsId": 0,
+    "masterVolumeValue": -80.0,
+    "musicValue": -80.0,
+    "soundFxValue": -80.0,
     "fullscreenValue": true
 }

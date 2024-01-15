@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Maze.unity
     guid: e52779098820fcb40a771829af1951d2
   - enabled: 1
-    path: Assets/Scenes/Puzzler.unity
-    guid: 631ec2b2bf753404fa2c06cb11d0e9be
+    path: Assets/Scenes/Building.unity
+    guid: 9f0498034ca968f48846df85efcd3e00
   m_configObjects: {}
