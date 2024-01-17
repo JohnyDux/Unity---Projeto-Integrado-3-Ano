@@ -11,6 +11,8 @@ public class RotateCylinder : MonoBehaviour
 
     public Slider RotateSlider;
 
+    public Renderer ObjectRenderer;
+
     //rotation check
     public float targetXRotation = 45f; // Set the desired X rotation here
     public float rotationTolerance = 5f;
@@ -22,20 +24,23 @@ public class RotateCylinder : MonoBehaviour
 
     void Update()
     {
-        float snappedX = Mathf.Round(RotateSlider.value / 90.0f) * 90.0f;
-
-        // Rotate the GameObject around the Y-axis based on the yRotation variable
-        transform.rotation = Quaternion.Euler(snappedX, 0f, -90f);
-
-        //Check rotation
-        float currentXRotation = transform.rotation.eulerAngles.x;
-        if (Mathf.Approximately(Mathf.Abs(currentXRotation), Mathf.Abs(targetXRotation)))
+        if(ObjectRenderer.material.color == Color.red)
         {
-            correctPosition = true;
-        }
-        else
-        {
-            correctPosition = false;
+            float snappedX = Mathf.Round(RotateSlider.value / 90.0f) * 90.0f;
+
+            // Rotate the GameObject around the Y-axis based on the yRotation variable
+            transform.rotation = Quaternion.Euler(snappedX, 0f, -90f);
+
+            //Check rotation
+            float currentXRotation = transform.rotation.eulerAngles.x;
+            if (Mathf.Approximately(Mathf.Abs(currentXRotation), Mathf.Abs(targetXRotation)))
+            {
+                correctPosition = true;
+            }
+            else
+            {
+                correctPosition = false;
+            }
         }
     }
 }

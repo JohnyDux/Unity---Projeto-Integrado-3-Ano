@@ -11,7 +11,6 @@ TagManager:
   - AI
   - Tile
   - EmptySpot
-  - Ladder
   layers:
   - Default
   - TransparentFX
