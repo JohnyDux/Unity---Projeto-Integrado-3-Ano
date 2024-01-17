@@ -494,6 +494,7 @@ MonoBehaviour:
   - {fileID: 186127431}
   - {fileID: 1488909485}
   - {fileID: 253408905}
+  correctPieces: 0
 --- !u!1 &106421753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,7 +3668,7 @@ MonoBehaviour:
   correctPosition: 0
   RotateSlider: {fileID: 797830658}
   targetXRotation: 90
-  rotationTolerance: 10
+  rotationTolerance: 5
 --- !u!136 &1213732140
 CapsuleCollider:
   m_ObjectHideFlags: 0

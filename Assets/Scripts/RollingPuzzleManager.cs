@@ -8,29 +8,39 @@ public class RollingPuzzleManager : MonoBehaviour
     public TextMeshProUGUI correctPiecesText;
     public RotateCylinder[] cylinders;
 
-    private int propertyCounter = 0;
+    public int correctPieces;
+
+    private bool[] previousBooleanStates;
+
+    void Start()
+    {
+        // Initialize the array to store previous boolean states
+        previousBooleanStates = new bool[cylinders.Length];
+        for (int i = 0; i < cylinders.Length; i++)
+        {
+            if (cylinders[i] != null)
+            {
+                previousBooleanStates[i] = cylinders[i].correctPosition;
+            }
+        }
+    }
 
     void Update()
     {
-        // Check and update the integer based on changes in the boolean property
-        CheckAndUpdateCounter();
+        correctPiecesText.text = "Correct Pieces: " + correctPieces;
 
-        // Do something based on the result
-        correctPiecesText.text = "Correct Pieces: " + propertyCounter;
-    }
-
-    void CheckAndUpdateCounter()
-    {
-        foreach (RotateCylinder obj in cylinders)
+        // Check for changes in the boolean property and modify the variable accordingly
+        for (int i = 0; i < cylinders.Length; i++)
         {
-            if (obj != null)
+            if (cylinders[i] != null)
             {
-                bool previousValue = obj.correctPosition;
-                // Check if the property has changed
-                if (previousValue != obj.correctPosition)
+                if (cylinders[i].correctPosition != previousBooleanStates[i])
                 {
-                    // Increment or decrement the counter based on the change
-                    propertyCounter += obj.correctPosition ? 1 : -1;
+                    // Update the variable based on the change in the boolean property
+                    correctPieces += cylinders[i].correctPosition ? 1 : -1;
+
+                    // Update the previous state
+                    previousBooleanStates[i] = cylinders[i].correctPosition;
                 }
             }
         }

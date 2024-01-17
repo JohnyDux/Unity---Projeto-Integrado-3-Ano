@@ -29,7 +29,7 @@ public class RotateCylinder : MonoBehaviour
 
         //Check rotation
         float currentXRotation = transform.rotation.eulerAngles.x;
-        if (Mathf.Abs(currentXRotation - targetXRotation) <= rotationTolerance)
+        if (Mathf.Approximately(Mathf.Abs(currentXRotation), Mathf.Abs(targetXRotation)))
         {
             correctPosition = true;
         }
