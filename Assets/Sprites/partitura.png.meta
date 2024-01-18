@@ -213,9 +213,9 @@ TextureImporter:
       name: partitura_5
       rect:
         serializedVersion: 2
-        x: 532
+        x: 533
         y: 355
-        width: 266.33334
+        width: 266
         height: 355
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -255,7 +255,7 @@ TextureImporter:
       name: partitura_7
       rect:
         serializedVersion: 2
-        x: 279
+        x: 266
         y: 0
         width: 266
         height: 355
@@ -293,6 +293,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: partitura_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 799
+        height: 838
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a5febf789bce34ba0619779fd25f5e
+      internalID: 1386928030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -313,6 +334,7 @@ TextureImporter:
       partitura_6: -1721742403
       partitura_7: 549766634
       partitura_8: 586068999
+      partitura_9: 1386928030
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

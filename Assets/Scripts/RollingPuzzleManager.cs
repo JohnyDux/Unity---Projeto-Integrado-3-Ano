@@ -45,7 +45,7 @@ public class RollingPuzzleManager : MonoBehaviour
     {
         frameWorldPosition = new Vector3(1f, 3f, 5f);
         moveDistanceX = 165f;
-        moveDistanceY = 225f;
+        moveDistanceY = 205f;
 
         // Initialize the array to store previous boolean states
         previousBooleanStates = new bool[cylinders.Length];
@@ -123,9 +123,6 @@ public class RollingPuzzleManager : MonoBehaviour
         // Draw the outer frame
         DrawOuterFrame(screenPosition.x, screenPosition.y, frameSize, frameThickness);
 
-        // Draw the inner frame
-        DrawInnerFrame(screenPosition.x, screenPosition.y, frameSize - 10 * frameThickness, frameThickness);
-
         // Reset the color to avoid affecting other GUI elements
         GUI.color = Color.white;
     }
@@ -139,18 +136,6 @@ public class RollingPuzzleManager : MonoBehaviour
         // Draw the left edge of the outer frame
         GUI.DrawTexture(new Rect(x - size / 2, Screen.height - y - size / 2, thickness, size), Texture2D.whiteTexture);
         // Draw the right edge of the outer frame
-        GUI.DrawTexture(new Rect(x + size / 2 - thickness, Screen.height - y - size / 2, thickness, size), Texture2D.whiteTexture);
-    }
-
-    void DrawInnerFrame(float x, float y, float size, float thickness)
-    {
-        // Draw the top edge of the inner frame
-        GUI.DrawTexture(new Rect(x - size / 2, Screen.height - y - size / 2 - thickness / 2, size, thickness), Texture2D.whiteTexture);
-        // Draw the bottom edge of the inner frame
-        GUI.DrawTexture(new Rect(x - size / 2, Screen.height - y + size / 2 - thickness / 2, size, thickness), Texture2D.whiteTexture);
-        // Draw the left edge of the inner frame
-        GUI.DrawTexture(new Rect(x - size / 2, Screen.height - y - size / 2, thickness, size), Texture2D.whiteTexture);
-        // Draw the right edge of the inner frame
         GUI.DrawTexture(new Rect(x + size / 2 - thickness, Screen.height - y - size / 2, thickness, size), Texture2D.whiteTexture);
     }
 

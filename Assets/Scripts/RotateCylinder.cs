@@ -14,6 +14,7 @@ public class RotateCylinder : MonoBehaviour
     public Renderer ObjectRenderer;
 
     //rotation check
+    public float currentXRotation;
     public float targetXRotation = 45f; // Set the desired X rotation here
     public float rotationTolerance = 5f;
 
@@ -32,7 +33,7 @@ public class RotateCylinder : MonoBehaviour
             transform.rotation = Quaternion.Euler(snappedX, 0f, -90f);
 
             //Check rotation
-            float currentXRotation = transform.rotation.eulerAngles.x;
+            currentXRotation = transform.rotation.eulerAngles.x;
             if (Mathf.Approximately(Mathf.Abs(currentXRotation), Mathf.Abs(targetXRotation)))
             {
                 correctPosition = true;
