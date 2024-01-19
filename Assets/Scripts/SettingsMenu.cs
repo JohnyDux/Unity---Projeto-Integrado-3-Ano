@@ -11,7 +11,7 @@ public class SettingsMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
-    public SettingsData settingsRead;
+    SettingsData settingsRead;
 
     Resolution[] resolutions;
 

@@ -13,6 +13,11 @@ public class JsonReadWriteSystem : MonoBehaviour
     public Toggle fullscreenToggle;
 
     string fullPath;
+
+    public void Start()
+    {
+        LoadFromJson();
+    }
     public void SaveToJson()
     {
         SettingsData data = new SettingsData();
