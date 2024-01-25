@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: f9b0a1df9c1023b4080a0b5923b10e8e
   - enabled: 1
+    path: Assets/Scenes/Settings Menu.unity
+    guid: c6e7edd666d0415429d03c96413266cc
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: ef0a36ccf0bf0a245a8468c10665b107
   - enabled: 1
     path: Assets/Scenes/Piano Tiles.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Settings Menu.unity
-    guid: c6e7edd666d0415429d03c96413266cc
   - enabled: 1
     path: Assets/Scenes/Maze.unity
     guid: e52779098820fcb40a771829af1951d2

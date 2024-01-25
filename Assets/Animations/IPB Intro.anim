@@ -748,7 +748,7 @@ AnimationClip:
   m_Events:
   - time: 4.233333
     functionName: LoadScene
-    data: MainMenu
+    data: Settings Menu
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

@@ -14,7 +14,7 @@ public class TileAction : MonoBehaviour
 
     //Physics and Velocity
     public Rigidbody2D rb;
-    public float fallingSpeed;
+    [HideInInspector]public float fallingSpeed;
 
     //Trigger and Score
     public bool isHit;
@@ -36,7 +36,7 @@ public class TileAction : MonoBehaviour
             SoundParticles = GetComponent<ParticleSystem>();
         }
 
-        fallingSpeed = Random.Range(1000f, 2000f);
+        fallingSpeed = Random.Range(100f, 200f);
 
         rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
     }

@@ -32,13 +32,13 @@ public class SettingsMenu : MonoBehaviour
             resolutionDropdown.ClearOptions();
         }
 
-        List<string> options = new List<string>();
+        List<string> resolutionOptions = new List<string>();
 
         int currentResolutionIndex = 0;
         for(int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + "x" + resolutions[i].height;
-            options.Add(option);
+            resolutionOptions.Add(option);
 
             if (resolutions[i].width == Screen.currentResolution.width &&
                 resolutions[i].height == Screen.currentResolution.height)
@@ -49,7 +49,7 @@ public class SettingsMenu : MonoBehaviour
 
         if (resolutionDropdown != null)
         {
-            resolutionDropdown.AddOptions(options);
+            resolutionDropdown.AddOptions(resolutionOptions);
             resolutionDropdown.value = currentResolutionIndex;
             resolutionDropdown.RefreshShownValue();
         }

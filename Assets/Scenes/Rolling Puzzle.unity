@@ -2776,13 +2776,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 5fb472a78b3c13b4193467e397e8bb7c, type: 2}
   resolutionDropdown: {fileID: 994065441900865373, guid: 4f2dfc3a6330f654c9844afd13ee8941, type: 3}
-  settingsRead:
-    resolutionId: 0
-    graphicsId: 0
-    masterVolumeValue: 0
-    musicValue: 0
-    soundFxValue: 0
-    fullscreenValue: 0
   current_resolution: 0
   fullscreen: 0
   current_quality: 0
@@ -4213,6 +4206,7 @@ GameObject:
   - component: {fileID: 997638278}
   - component: {fileID: 997638277}
   - component: {fileID: 997638281}
+  - component: {fileID: 997638282}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4318,6 +4312,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsRef: {fileID: 551543860}
+--- !u!114 &997638282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997638276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c8b7a790503ef41b239c60d4003438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 994065441900865373, guid: 4f2dfc3a6330f654c9844afd13ee8941, type: 3}
+  graphicsDropdown: {fileID: 6393049248026791284, guid: 68e0ebed94a04974482bea2ab3f3f145, type: 3}
+  masterVolumeSlider: {fileID: 3689167065955381238, guid: 61a9361480d78b845ab654a391023798, type: 3}
+  musicVolumeSlider: {fileID: 2067883844030947190, guid: 2f82cc3c7b4866545b5bf7d313b8c808, type: 3}
+  soundFxVolumeSlider: {fileID: 5878135695210853470, guid: a83b50c2bb3cb314e9140f942b716bd2, type: 3}
+  fullscreenToggle: {fileID: 2475373962236336760, guid: ace1b46bb96dce44288cc36f2bfe65b4, type: 3}
 --- !u!1 &1031791263
 GameObject:
   m_ObjectHideFlags: 0

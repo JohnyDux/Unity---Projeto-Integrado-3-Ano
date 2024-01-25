@@ -4986,7 +4986,7 @@ MonoBehaviour:
   - {r: 0.08497684, g: 0.3275165, b: 0.5849056, a: 1}
   - {r: 0.08235294, g: 0.23529412, b: 0.4, a: 1}
   rb: {fileID: 9159798266592408106}
-  fallingSpeed: 100
+  fallingSpeed: 10
   isHit: 0
   scoreValue: 1
   layerMask:
