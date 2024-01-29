@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class MazeScore : MonoBehaviour
 {
-    [Range(0, 30)] public float timeLeft;
+    [Range(0, 120)] public float timeLeft;
     public TextMeshProUGUI timeText;
 
     public float score;
@@ -68,6 +68,7 @@ public class MazeScore : MonoBehaviour
 
             player.moveSpeed = 0f;
             aIChaser.navMeshAgent.speed = 0f;
+            Time.timeScale = 0f;
         }
     }
 

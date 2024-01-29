@@ -806,7 +806,7 @@ MonoBehaviour:
   minX: -164
   maxX: 164
   minY: -211
-  maxY: 223
+  maxY: 199
   activeGameObject: {fileID: 0}
   activeObjectColor: {r: 0, g: 0, b: 0, a: 0}
   gameObjects:
@@ -821,6 +821,7 @@ MonoBehaviour:
   - {fileID: 253408904}
   isLocked: 0
   slider: {fileID: 648561521}
+  snapInterval: 90
 --- !u!1 &106421753
 GameObject:
   m_ObjectHideFlags: 0

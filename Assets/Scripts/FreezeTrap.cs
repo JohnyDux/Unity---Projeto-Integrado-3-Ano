@@ -8,6 +8,8 @@ public class FreezeTrap : MonoBehaviour
     public float freezeDuration; // Adjust this value for the duration of the freeze
     private bool isActive = false;
     public MazeAIChaser AICharacter;
+    public BoxCollider boxCollider;
+    public MeshRenderer meshRenderer;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +23,12 @@ public class FreezeTrap : MonoBehaviour
             ActivateFreezeTrap(other.gameObject);
             UnfreezeAfterDelay(other.gameObject);
         }
+
+        if (other.CompareTag("AI"))
+        {
+            Destroy(meshRenderer);
+            Destroy(boxCollider);
+        }
     }
 
     void ActivateFreezeTrap(GameObject aiObject)
@@ -32,6 +40,8 @@ public class FreezeTrap : MonoBehaviour
         // Disable the AI's NavMeshAgent to stop its movement
         AICharacter.isFreezed = true;
 
+        AICharacter.spriteRenderer.sprite = AICharacter.frozenSprite;
+
         // Start a coroutine to unfreeze the AI after a certain duration
         StartCoroutine(UnfreezeAfterDelay(aiObject));
     }
@@ -42,11 +52,11 @@ public class FreezeTrap : MonoBehaviour
 
         // Re-enable the AI's NavMeshAgent to resume its movement
         AICharacter.isFreezed = false;
+        AICharacter.currentPauseTime = 0f;
+
+        AICharacter.spriteRenderer.sprite = AICharacter.normalSprite;
 
         // Reset the trap state
         isActive = false;
-
-        // Optionally, play an effect or sound to indicate the end of the freeze
-        // Example: GetComponent<ParticleSystem>().Stop();
     }
 }

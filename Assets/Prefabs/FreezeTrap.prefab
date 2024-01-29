@@ -112,3 +112,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezeDuration: 1.950176
   AICharacter: {fileID: 0}
+  boxCollider: {fileID: 957541419810688686}
+  meshRenderer: {fileID: 957541419810688687}
