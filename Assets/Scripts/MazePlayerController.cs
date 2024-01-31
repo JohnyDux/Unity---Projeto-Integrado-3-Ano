@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MazePlayerController : MonoBehaviour
 {
+    //Movement
     public float moveSpeed = 5f;
 
     public Rigidbody rb;
@@ -14,6 +15,7 @@ public class MazePlayerController : MonoBehaviour
 
     public Transform Mesh;
 
+    //Steps
     public ParticleSystem steps;
     ParticleSystem.MainModule mainModule;
     ParticleSystem.EmissionModule emissionModule;
@@ -23,6 +25,9 @@ public class MazePlayerController : MonoBehaviour
     Vector3 targetRotationEulerAngles;
     Quaternion targetRotation;
     public float rotationSpeed = 180f;
+
+    //Red Triangle
+    public SpriteRenderer triangleRenderer;
 
     void Start()
     {
@@ -67,11 +72,13 @@ public class MazePlayerController : MonoBehaviour
         {
             // Rigidbody is considered stopped
             rateMultiplier = 0f;
+            triangleRenderer.enabled = true;
         }
         else
         {
             // Rigidbody is still moving
             rateMultiplier = 4f;
+            triangleRenderer.enabled = false;
         }
         emissionModule.rateOverTimeMultiplier = rateMultiplier;
 

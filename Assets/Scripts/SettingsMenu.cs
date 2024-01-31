@@ -22,7 +22,7 @@ public class SettingsMenu : MonoBehaviour
     public float current_musicVolume;
     public float current_soundFXVolume;
 
-    void Start()
+    void Awake()
     {
         resolutions = Screen.resolutions;
         current_quality = ((int)Graphics.activeTier);
