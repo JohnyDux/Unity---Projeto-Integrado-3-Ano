@@ -8,9 +8,12 @@ public class MazeAIChaser : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public float wanderRadius = 10f; // Adjust this value for the wandering radius
     public float navMeshSpeed = 2.5f;
+    public float followDelay = .2f;
 
     public FieldOfView fieldOfView;
     public Transform player;
+
+    public Vector3 destination;
 
     void Start()
     {
@@ -26,7 +29,7 @@ public class MazeAIChaser : MonoBehaviour
         {
             navMeshAgent.SetDestination(player.position);
         }
-        else
+        else if (!navMeshAgent.hasPath)
         {
             SetRandomDestination();
         }
@@ -42,6 +45,8 @@ public class MazeAIChaser : MonoBehaviour
         // Find a point on the NavMesh within the generated random direction
         if (NavMesh.SamplePosition(randomDirection, out navMeshHit, wanderRadius, NavMesh.AllAreas))
         {
+            destination = navMeshHit.position;
+
             // Set the NavMeshAgent's destination to the sampled point
             navMeshAgent.SetDestination(navMeshHit.position);
         }

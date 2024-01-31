@@ -22062,7 +22062,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694798452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35570,6 +35570,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 1700887713}
   wanderRadius: 100
   navMeshSpeed: 4
+  followDelay: 0.2
   fieldOfView: {fileID: 1700887718}
   player: {fileID: 505107593}
 --- !u!114 &1700887715
@@ -35638,7 +35639,9 @@ MonoBehaviour:
   meshResolution: 10
   edgeResolveIterations: 0
   edgeDstThreshold: 0
+  maskCutawayDst: 0.1
   viewMeshFilter: {fileID: 694798455}
+  AICharacter: {fileID: 1700887714}
 --- !u!1001 &1719127975
 PrefabInstance:
   m_ObjectHideFlags: 0

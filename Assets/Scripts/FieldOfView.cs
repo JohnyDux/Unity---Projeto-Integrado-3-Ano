@@ -17,8 +17,12 @@ public class FieldOfView : MonoBehaviour
 	public int edgeResolveIterations;
 	public float edgeDstThreshold;
 
+	public float maskCutawayDst = .1f;
+
 	public MeshFilter viewMeshFilter;
 	Mesh viewMesh;
+
+	public MazeAIChaser AICharacter;
 
 	void Start()
 	{
@@ -26,7 +30,7 @@ public class FieldOfView : MonoBehaviour
 		viewMesh.name = "View Mesh";
 		viewMeshFilter.mesh = viewMesh;
 
-		StartCoroutine("FindTargetsWithDelay", .2f);
+		StartCoroutine("FindTargetsWithDelay", AICharacter.followDelay);
 	}
 
 
