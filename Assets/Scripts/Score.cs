@@ -41,8 +41,14 @@ public class Score : MonoBehaviour
     public AudioMixer audioMixer;
     public string mixerGroupName;
     public float volumeChangeSpeed = 1.0f;
-    public float targetVolume = 20.0f;
+    float targetVolume;
     private AudioMixerGroup audioMixerGroup;
+    public AudioSource audioSource;
+
+    public AudioClip pianoMusic;
+    public AudioClip lostSound;
+    public AudioClip winSound;
+
     private void Start()
     {
         timeLeft -= Time.deltaTime;
@@ -62,7 +68,12 @@ public class Score : MonoBehaviour
         {
             // Get the Audio Mixer Group by name
             audioMixerGroup = audioMixer.FindMatchingGroups(mixerGroupName)[0];
+            audioSource.clip = pianoMusic;
         }
+
+        targetVolume = -80.0f;
+
+        SetVolume(targetVolume);
 
         pianoTile.fallingSpeed = 100f;
 
@@ -87,7 +98,13 @@ public class Score : MonoBehaviour
 
     public void Update()
     {
-        if(scorePoints > checkers.numberOfMisses)
+        if (scorePoints < 2)
+        {
+            targetVolume = 2.0f;
+            SetVolume(targetVolume);
+        }
+
+        if (scorePoints/1.5 > checkers.numberOfMisses && scorePoints >= 2 && scorePoints < pointsToWin)
         {
             ViolinistAnimator.SetBool("IsPlaying", true);
             BateristAnimator.SetBool("IsPlaying", true);
@@ -99,7 +116,7 @@ public class Score : MonoBehaviour
             StartParticleSystem(PianistSoundParticles);
             StartParticleSystem(SaxophonistSoundParticles);
 
-            targetVolume = 20.0f;
+            targetVolume = 2.0f;
         }
         else
         {
@@ -115,7 +132,11 @@ public class Score : MonoBehaviour
 
             targetVolume = -80.0f;
         }
-        ChangeVolumeOverTime(targetVolume);
+
+        if(scorePoints >= 2 && scorePoints < pointsToWin)
+        {
+            ChangeVolumeOverTime(targetVolume);
+        }
 
         if (timeLeft > 0)
         {
@@ -132,6 +153,8 @@ public class Score : MonoBehaviour
         {
             if (scorePoints > pointsToWin)
             {
+                audioSource.clip = winSound;
+
                 WinScreen.SetActive(true);
                 WinConfetti.SetActive(true);
                 LostScreen.SetActive(false);
@@ -151,6 +174,8 @@ public class Score : MonoBehaviour
             }
             else
             {
+                audioSource.clip = lostSound;
+
                 WinScreen.SetActive(false);
                 WinConfetti.SetActive(false);
                 LostScreen.SetActive(true);

@@ -15,6 +15,8 @@ public class DestroyerCheckers : MonoBehaviour
     public TextMeshProUGUI missText;
 
     public GameObject menuButton;
+
+    public SpawnerAction spawnerAction;
     private void Start()
     {
         numberOfMisses = 0;
@@ -35,6 +37,12 @@ public class DestroyerCheckers : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         TileAction tile = collision.GetComponent<TileAction>();
+
+        if (collision.CompareTag("piano"))
+        {
+            spawnerAction.currentAmountPieces--;
+        }
+
         if (!tile.isHit && collision.CompareTag("piano"))
         {
             numberOfMisses++;

@@ -8,72 +8,77 @@ public class SpawnerAction : MonoBehaviour
     public float width = 10f;
     public float height = 5f;
     public GameObject pianoTile;
-    public float startDelay = 0.5f;
+    float startDelay;
+    public float delayValue;
     public float min = -5f;
     public float max = 10f;
 
     Transform freeposition;
 
     public Score score;
-
-    void Start()
-    {
-        spawner();
-    }
+    public int currentAmountPieces;
 
     void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(width, height, 0));
     }
 
-    void Update()
+    void Start()
     {
-        if (checkforempty() && score.timeLeft > 0)
-        {
-            spawner();
-        }
+        startDelay = 2f;
     }
 
-    void spawnuntil()
+    void Update()
     {
-        Transform position = freeposition;
-        float rand = Random.Range(min, max);
-        Vector3 offset = new Vector3(rand, 0, 0);
-
-        if (position)
+        if(startDelay <= 0)
         {
-            GameObject piano = Instantiate(pianoTile, position.transform.position + offset, Quaternion.identity);
-            piano.transform.parent = position;
+            startDelay = delayValue;
         }
-        if (freeposition)
+
+        if(startDelay > 0)
         {
-            Invoke("spawnuntill", startDelay);
+            startDelay -= Time.deltaTime;
+        }
+        else if (score.scorePoints < 5)
+        {
+            delayValue = 0.5f;
+        }
+        else if (score.scorePoints < 10 && score.scorePoints > 5)
+        {
+            delayValue = 0.3f;
+        }
+        else if (score.scorePoints < 15 && score.scorePoints > 10)
+        {
+            delayValue = 0.1f;
+        }
+
+        if (score.timeLeft > 2 && startDelay <= 1 && currentAmountPieces < 3)
+        {
+             spawner();
         }
     }
 
     void spawner()
     {
-        startDelay -= Time.deltaTime;
-
-        if (startDelay <= 0)
-        {
-            foreach (Transform child in transform)
+        foreach (Transform child in transform)
             {
                 GameObject piano = Instantiate(pianoTile, child.position, Quaternion.identity);
                 piano.transform.parent = child;
-            }
-        }   
+                currentAmountPieces++;
+            }  
     }
 
     bool checkforempty()
     {
         foreach (Transform child in transform)
         {
+            //verifica se não tem espaço vazios
             if (child.childCount > 0)
-            {
-                return false;
-            }
+                {
+                    return false;
+                }
         }
+        //verifica se tem espaços vazios
         return true;
     }
 }

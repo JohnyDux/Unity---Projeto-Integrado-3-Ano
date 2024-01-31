@@ -7,10 +7,7 @@ using UnityEngine.SceneManagement;
 public class TileAction : MonoBehaviour
 {
     //Color of the tile
-    public SpriteRenderer color;
-    public Color StartColor;
-    public List<Color> colorsList;
-    Color ClickColor;
+    public GameObject ColorOverlay;
 
     //Physics and Velocity
     public Rigidbody2D rb;
@@ -28,7 +25,7 @@ public class TileAction : MonoBehaviour
     void Start()
     {
         isHit = false;
-        color.color = StartColor;
+        ColorOverlay.SetActive(false);
         scoreRef = FindObjectOfType<Score>();
 
         if (SoundParticles == null)
@@ -36,14 +33,21 @@ public class TileAction : MonoBehaviour
             SoundParticles = GetComponent<ParticleSystem>();
         }
 
-        fallingSpeed = Random.Range(100f, 200f);
+        fallingSpeed = Random.Range(7f, 15f);
 
-        rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
-    }
+        if (scoreRef.timeLeft > 60 && scoreRef.timeLeft < 90)
+        {
+            rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
+        }
 
-    void Update()
-    {
-        rb.velocity = new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
+        else if (scoreRef.timeLeft > 30 && scoreRef.timeLeft < 60)
+        {
+            rb.velocity = new Vector3(0, -fallingSpeed * 1.5f * Time.deltaTime, 0);
+        }
+        else
+        {
+            rb.velocity = new Vector3(0, -fallingSpeed * 2.2f * Time.deltaTime, 0);
+        }
     }
 
     void OnMouseOver()
@@ -52,8 +56,7 @@ public class TileAction : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && isHit == false)
             {
-                int rand = Random.Range(0, colorsList.Count);
-                color.color = colorsList[rand];
+                ColorOverlay.SetActive(true);
                 StartParticleSystem();
                 scoreRef.ScoreUpdate(1);
                 isHit = true;
@@ -71,7 +74,7 @@ public class TileAction : MonoBehaviour
     {
         if(collision.collider.tag == "border")
         {
-            if (color.color != StartColor)
+            if (ColorOverlay != null && ColorOverlay.activeSelf)
             {
                 Debug.Log("you're fine");
             }
