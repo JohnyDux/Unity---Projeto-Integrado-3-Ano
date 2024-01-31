@@ -35573,6 +35573,7 @@ MonoBehaviour:
   followDelay: 0.2
   fieldOfView: {fileID: 1700887718}
   player: {fileID: 505107593}
+  destination: {x: 0, y: 0, z: 0}
 --- !u!114 &1700887715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35610,7 +35611,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700887711}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
