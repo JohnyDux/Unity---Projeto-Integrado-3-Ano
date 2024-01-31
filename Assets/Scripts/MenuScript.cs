@@ -12,6 +12,19 @@ public class MenuScript : MonoBehaviour
     private void Start()
     {
         LoadFromJson();
+
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "Intro")
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
     }
     public void LoadScene(string SceneName)
     {
