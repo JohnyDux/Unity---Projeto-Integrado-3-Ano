@@ -104,7 +104,7 @@ public class Score : MonoBehaviour
             SetVolume(targetVolume);
         }
 
-        if (scorePoints/1.5 > checkers.numberOfMisses && scorePoints >= 2 && scorePoints < pointsToWin)
+        if (scorePoints * 0.8 > checkers.numberOfMisses && scorePoints >= 2 && timeLeft > 0)
         {
             ViolinistAnimator.SetBool("IsPlaying", true);
             BateristAnimator.SetBool("IsPlaying", true);

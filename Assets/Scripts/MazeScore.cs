@@ -46,7 +46,7 @@ public class MazeScore : MonoBehaviour
             MenuButton.SetActive(true);
             MusicSheetButton.SetActive(true);
 
-            player.moveSpeed = 0f;
+            player.movementSpeed = 0f;
             aIChaser.navMeshAgent.speed = 0f;
         }
 
@@ -56,7 +56,7 @@ public class MazeScore : MonoBehaviour
             LostScreen.SetActive(true);
             MenuButton.SetActive(true);
 
-            player.moveSpeed = 0f;
+            player.movementSpeed = 0f;
             aIChaser.navMeshAgent.speed = 0f;
         }
 
@@ -66,7 +66,7 @@ public class MazeScore : MonoBehaviour
             LostScreen.SetActive(true);
             MenuButton.SetActive(true);
 
-            player.moveSpeed = 0f;
+            player.movementSpeed = 0f;
             aIChaser.navMeshAgent.speed = 0f;
             Time.timeScale = 0f;
         }

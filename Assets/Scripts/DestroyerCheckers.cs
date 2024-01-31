@@ -14,6 +14,7 @@ public class DestroyerCheckers : MonoBehaviour
 
     public TextMeshProUGUI missText;
 
+    public GameObject LostScreen;
     public GameObject menuButton;
 
     public SpawnerAction spawnerAction;
@@ -21,6 +22,7 @@ public class DestroyerCheckers : MonoBehaviour
     {
         numberOfMisses = 0;
         menuButton.SetActive(false);
+        LostScreen.SetActive(false);
     }
 
     void Update()
@@ -29,6 +31,7 @@ public class DestroyerCheckers : MonoBehaviour
         {
             Time.timeScale = 0f;
             menuButton.SetActive(true);
+            LostScreen.SetActive(true);
         }
 
         missText.text = numberOfMisses.ToString("0") + " Missed";

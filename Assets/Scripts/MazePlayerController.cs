@@ -5,11 +5,13 @@ using UnityEngine;
 public class MazePlayerController : MonoBehaviour
 {
     //Movement
-    public float moveSpeed = 5f;
-
     public Rigidbody rb;
-
     Vector3 movement;
+    public float movementSpeed = 5f;
+    public float minX = -5f;
+    public float maxX = 5f;
+    public float minZ = -5f;
+    public float maxZ = 5f;
 
     public int lifes = 3;
 
@@ -37,8 +39,13 @@ public class MazePlayerController : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.z = Input.GetAxisRaw("Vertical");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+
+        // Calculate the movement direction
+        movement = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+
+        MovePlayer(movement);
 
         // Flip player when x change, use only if you want
         Vector3 characterScale = transform.localScale;
@@ -81,12 +88,19 @@ public class MazePlayerController : MonoBehaviour
             triangleRenderer.enabled = false;
         }
         emissionModule.rateOverTimeMultiplier = rateMultiplier;
-
     }
 
-    void FixedUpdate()
+    void MovePlayer(Vector3 movement)
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        // Calculate the new position
+        Vector3 newPosition = rb.position + movement * movementSpeed * Time.deltaTime;
+
+        // Clamp the new position to stay within the specified range
+        float clampedX = Mathf.Clamp(newPosition.x, minX, maxX);
+        float clampedZ = Mathf.Clamp(newPosition.z, minZ, maxZ);
+
+        // Update the Rigidbody's position directly
+        rb.position = new Vector3(clampedX, rb.position.y, clampedZ);
     }
 
     void SetNewStartRotation(float rotationSpeed = 180f)
