@@ -28,10 +28,12 @@ public class MazeAIChaser : MonoBehaviour
         if (fieldOfView.visibleTargets.Count>0)
         {
             navMeshAgent.SetDestination(player.position);
+            navMeshSpeed = 3f;
         }
         else if (!navMeshAgent.hasPath)
         {
             SetRandomDestination();
+            navMeshSpeed = 2.5f;
         }
     }
 

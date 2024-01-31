@@ -100,9 +100,10 @@ public class RollingPuzzleManager : MonoBehaviour
             }
         }
 
-        if(isLocked == false)
+        if(isLocked == true && activeGameObject != null)
         {
-            slider.value = 0;
+            float currentXRotation = activeGameObject.transform.eulerAngles.x;
+            slider.value = currentXRotation;
         }
 
         if(correctPieces == 9)
