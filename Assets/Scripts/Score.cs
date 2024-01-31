@@ -22,7 +22,7 @@ public class Score : MonoBehaviour
     public GameObject WinConfetti;
 
     [Header("Time Left in Seconds")]
-    [Range(0, 90)] public float timeLeft;
+    [Range(0, 95)] public float timeLeft;
     public TextMeshProUGUI timerText;
 
     [Header("Characters Animation and Particles")]
@@ -171,6 +171,15 @@ public class Score : MonoBehaviour
                 StopParticleSystem(SaxophonistSoundParticles);
 
                 pianoTile.fallingSpeed = 0f;
+
+                //Destroy tiles
+                GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag("piano");
+
+                // Destroy each GameObject in the array
+                foreach (GameObject obj in objectsToDestroy)
+                {
+                    Destroy(obj);
+                }
             }
             else
             {

@@ -63,6 +63,7 @@ public class SpawnerAction : MonoBehaviour
         foreach (Transform child in transform)
             {
                 GameObject piano = Instantiate(pianoTile, child.position, Quaternion.identity);
+                pianoTile.GetComponent<TileAction>().fallingSpeed = Random.Range(15f, 35f);
                 piano.transform.parent = child;
                 currentAmountPieces++;
             }  
