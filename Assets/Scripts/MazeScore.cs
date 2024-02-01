@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using TMPro;
 public class MazeScore : MonoBehaviour
 {
@@ -21,6 +22,18 @@ public class MazeScore : MonoBehaviour
     public GameObject MenuButton;
     public GameObject MusicSheetButton;
 
+    [Header("Audio")]
+    public AudioMixer audioMixer;
+    public string mixerGroupName;
+    public float volumeChangeSpeed = 1.0f;
+    float targetVolume;
+    private AudioMixerGroup audioMixerGroup;
+    public AudioSource audioSource;
+
+    public AudioClip mazeMusic;
+    public AudioClip lostSound;
+    public AudioClip winSound;
+
     private void Start()
     {
         MenuButton.SetActive(false);
@@ -28,6 +41,13 @@ public class MazeScore : MonoBehaviour
         WinScreen.SetActive(false);
         LostScreen.SetActive(false);
         Confetis.SetActive(false);
+
+        if (audioMixer != null)
+        {
+            // Get the Audio Mixer Group by name
+            audioMixerGroup = audioMixer.FindMatchingGroups(mixerGroupName)[0];
+            audioSource.clip = mazeMusic;
+        }
     }
 
     void Update()
@@ -46,6 +66,8 @@ public class MazeScore : MonoBehaviour
             MenuButton.SetActive(true);
             MusicSheetButton.SetActive(true);
 
+            audioSource.clip = winSound;
+
             player.movementSpeed = 0f;
             aIChaser.navMeshAgent.speed = 0f;
         }
@@ -56,6 +78,8 @@ public class MazeScore : MonoBehaviour
             LostScreen.SetActive(true);
             MenuButton.SetActive(true);
 
+            audioSource.clip = lostSound;
+
             player.movementSpeed = 0f;
             aIChaser.navMeshAgent.speed = 0f;
         }
@@ -65,6 +89,8 @@ public class MazeScore : MonoBehaviour
             timeText.text = "";
             LostScreen.SetActive(true);
             MenuButton.SetActive(true);
+
+            audioSource.clip = lostSound;
 
             player.movementSpeed = 0f;
             aIChaser.navMeshAgent.speed = 0f;

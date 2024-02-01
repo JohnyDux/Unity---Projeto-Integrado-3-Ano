@@ -73,7 +73,7 @@ public class Score : MonoBehaviour
 
         targetVolume = -80.0f;
 
-        SetVolume(targetVolume);
+        SetVolume("SoundEffects", targetVolume);
 
         pianoTile.fallingSpeed = 100f;
 
@@ -101,7 +101,7 @@ public class Score : MonoBehaviour
         if (scorePoints < 2)
         {
             targetVolume = 2.0f;
-            SetVolume(targetVolume);
+            SetVolume("SoundEffects", targetVolume);
         }
 
         if (scorePoints * 0.8 > checkers.numberOfMisses && scorePoints >= 2 && timeLeft > 0)
@@ -116,7 +116,7 @@ public class Score : MonoBehaviour
             StartParticleSystem(PianistSoundParticles);
             StartParticleSystem(SaxophonistSoundParticles);
 
-            targetVolume = 2.0f;
+            targetVolume = 20.0f;
         }
         else
         {
@@ -135,7 +135,7 @@ public class Score : MonoBehaviour
 
         if(scorePoints >= 2 && scorePoints < pointsToWin)
         {
-            ChangeVolumeOverTime(targetVolume);
+            ChangeVolumeOverTime("Music", targetVolume);
         }
 
         if (timeLeft > 0)
@@ -223,20 +223,20 @@ public class Score : MonoBehaviour
     }
 
     // Function to change volume over time
-    void ChangeVolumeOverTime(float targetVolume)
+    void ChangeVolumeOverTime(string mixerGroupName, float newVolume)
     {
         float currentVolume;
         audioMixer.GetFloat(mixerGroupName, out currentVolume);
 
         // Interpolate towards the target volume
-        float newVolume = Mathf.Lerp(currentVolume, targetVolume, Time.deltaTime * volumeChangeSpeed);
+        float targetVolume = Mathf.Lerp(currentVolume, newVolume, Time.deltaTime * volumeChangeSpeed);
 
         // Set the new volume to the Audio Mixer Group
-        audioMixer.SetFloat(mixerGroupName, newVolume);
+        audioMixer.SetFloat(mixerGroupName, targetVolume);
     }
 
     // Function to set the volume instantly
-    public void SetVolume(float newVolume)
+    public void SetVolume(string mixerGroupName, float newVolume)
     {
         // Set the new volume to the Audio Mixer Group
         audioMixer.SetFloat(mixerGroupName, newVolume);

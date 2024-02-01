@@ -14,6 +14,8 @@ public class RollingPuzzleManager : MonoBehaviour
 
     private bool[] previousBooleanStates;
 
+    public CylinderSelector cylinderSelector;
+
     //Selector
     public Color frameColor; // Set the color of the frame
     public float frameSize = 100f; // Set the size of the frame
@@ -31,19 +33,27 @@ public class RollingPuzzleManager : MonoBehaviour
     public float maxY = 5f;   // Maximum allowed y-axis position
 
     public GameObject activeGameObject;
+    public float activeGameObjectRotation;
     public Color activeObjectColor; // Color for the active game object
     public List<GameObject> gameObjects; // List of game objects to check against
     public bool isLocked = false; // Flag to track whether the frame is locked
-    private bool spacePressed = false; // Flag to track if the spacebar has been pressed
+    bool trigger;
+    private bool isSelected = false; // Flag to track if the spacebar has been pressed
 
     private bool canMoveX = true; // Control X-axis movement
     private bool canMoveY = true; // Control Y-axis movement
 
     public Slider slider;
 
+    //Time and Win
+    [Range(0, 60)] public float timeLeft;
+    public TextMeshProUGUI timeText;
+    public GameObject WinSprite;
+    public GameObject LostSprite;
+
     void Start()
     {
-        frameWorldPosition = new Vector3(1f, 3f, 5f);
+        frameWorldPosition = new Vector3(0f, 3f, 5f);
         moveDistanceX = 165f;
         moveDistanceY = 205f;
 
@@ -58,59 +68,125 @@ public class RollingPuzzleManager : MonoBehaviour
         }
 
         slider.value = 0;
+
+        trigger = false;
+
+        WinSprite.SetActive(false);
+        LostSprite.SetActive(false);
     }
 
     void Update()
     {
-        correctPiecesText.text = "Correct Pieces: " + correctPieces;
-
-        // Check for changes in the boolean property and modify the variable accordingly
-        for (int i = 0; i < cylinders.Length; i++)
+        if (timeLeft > 0)
         {
-            if (cylinders[i] != null)
-            {
-                if (cylinders[i].correctPosition != previousBooleanStates[i])
-                {
-                    // Update the variable based on the change in the boolean property
-                    correctPieces += cylinders[i].correctPosition ? 1 : -1;
+            timeLeft -= Time.deltaTime;
+            timeText.text = "Time Left: " + Mathf.Round(timeLeft).ToString();
 
-                    // Update the previous state
-                    previousBooleanStates[i] = cylinders[i].correctPosition;
+            // Check for keyboard input (you can customize this condition based on your requirements)
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+            {
+                // Disable the slider interactability
+                if (slider != null)
+                {
+                    slider.interactable = false;
+                }
+            }
+            else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+            {
+                // Enable the slider interactability when keyboard input is released
+                if (slider != null)
+                {
+                    slider.interactable = true;
+                }
+            }
+
+
+            activeGameObject = cylinderSelector.hitObject;
+
+            correctPiecesText.text = "Correct Pieces: " + correctPieces;
+
+            // Check for changes in the boolean property and modify the variable accordingly
+            for (int i = 0; i < cylinders.Length; i++)
+            {
+                if (cylinders[i] != null)
+                {
+                    if (cylinders[i].correctPosition != previousBooleanStates[i])
+                    {
+                        // Update the variable based on the change in the boolean property
+                        correctPieces += cylinders[i].correctPosition ? 1 : -1;
+
+                        // Update the previous state
+                        previousBooleanStates[i] = cylinders[i].correctPosition;
+                    }
+                }
+            }
+
+            // Move the frame based on input
+            MoveFrame();
+
+            // Check if the frame's position matches any game object's position
+            CheckGameObjectCollision();
+
+            // Toggle spacePressed when the spacebar is pressed
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                isSelected = !isSelected;
+
+                if (trigger == true)
+                {
+                    trigger = false;
+                }
+                else
+                {
+                    trigger = true;
+                }
+
+                // If space is pressed again, reset the color and selected game object
+                if (!isSelected)
+                {
+                    ResetColors();
+                    isLocked = false;
+                    activeGameObject = null;
+                }
+            }
+
+            if (trigger == true)
+            {
+                isLocked = true;
+            }
+            else
+            {
+                isLocked = false;
+            }
+
+            if (activeGameObject != null && isLocked)
+            {
+                float xAngle = slider.value;
+                activeGameObjectRotation = xAngle;
+
+                activeGameObject.GetComponent<RotateCylinder>().currentXRotation = activeGameObjectRotation;
+            }
+
+            if (correctPieces == 9)
+            {
+                Time.timeScale = 0f;
+                WinSprite.SetActive(true);
+
+                //Slider Lock
+                if (slider != null)
+                {
+                    slider.interactable = false;
                 }
             }
         }
-        
-        // Move the frame based on input
-        MoveFrame();
 
-        // Check if the frame's position matches any game object's position
-        CheckGameObjectCollision();
-
-        // Toggle spacePressed when the spacebar is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            spacePressed = !spacePressed;
-            isLocked = true;
-            // If space is pressed again, reset the color and selected game object
-            if (!spacePressed)
-            {
-                ResetColors();
-                isLocked = false;
-                activeGameObject = null;
-            }
-        }
-
-        if(isLocked == true && activeGameObject != null)
-        {
-            float currentXRotation = activeGameObject.transform.eulerAngles.x;
-            slider.value = currentXRotation;
-        }
-
-        if(correctPieces == 9)
+        else
         {
             Time.timeScale = 0f;
-            correctPiecesText.text = "You Won";
+            LostSprite.SetActive(true);
         }
+
+        
     }
 
     void OnGUI()
@@ -204,7 +280,7 @@ public class RollingPuzzleManager : MonoBehaviour
                 activeGameObject = hitObject;
 
                 // Change the color of the selection square (frame)
-                if (isLocked == false)
+                if (isLocked == false && activeGameObject != null)
                 {
                     frameColor = Color.black;
                     activeGameObject.GetComponent<Renderer>().material.color = Color.white;

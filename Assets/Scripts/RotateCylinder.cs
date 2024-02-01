@@ -9,14 +9,12 @@ public class RotateCylinder : MonoBehaviour
     public GameObject cylinder;
     public bool correctPosition;
 
-    public Slider RotateSlider;
-
-    public Renderer ObjectRenderer;
+    public RollingPuzzleManager puzzleManager;
+    public CylinderSelector cylinderSelector;
 
     //rotation check
     public float currentXRotation;
     public float targetXRotation = 45f; // Set the desired X rotation here
-    public float rotationTolerance = 5f;
 
     void Start()
     {
@@ -25,15 +23,16 @@ public class RotateCylinder : MonoBehaviour
 
     void Update()
     {
-        if(ObjectRenderer.material.color == Color.red)
-        {
-            float snappedX = Mathf.Round(RotateSlider.value / 90.0f) * 90.0f;
+        float snappedX = Mathf.Round(puzzleManager.slider.value / 90.0f) * 90.0f;
 
+        currentXRotation = transform.rotation.eulerAngles.x;
+
+        if (this.gameObject == puzzleManager.activeGameObject && cylinderSelector.isSelected && cylinderSelector.hitObject == this.gameObject)
+        {
             // Rotate the GameObject around the Y-axis based on the yRotation variable
-            transform.rotation = Quaternion.Euler(snappedX, 0f, -90f);
+            cylinder.transform.rotation = Quaternion.Euler(snappedX, 0f, -90f);
 
             //Check rotation
-            currentXRotation = transform.rotation.eulerAngles.x;
             if (Mathf.Approximately(Mathf.Abs(currentXRotation), Mathf.Abs(targetXRotation)))
             {
                 correctPosition = true;
@@ -42,6 +41,6 @@ public class RotateCylinder : MonoBehaviour
             {
                 correctPosition = false;
             }
-        }
+        }      
     }
 }
